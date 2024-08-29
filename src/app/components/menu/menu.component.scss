@@ -1,0 +1,35 @@
+.menu-container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espaçamento entre os grupos de botão/ícone */
+    margin-right: 3px;
+}
+
+.btn-group {
+    display: flex;
+    margin-left: 20px;
+}
+
+.icon {
+    width: 22px; /* Ajuste o tamanho do ícone conforme necessário */
+    height: 22px;
+    margin-right: 15px; /* Espaçamento entre o ícone e o botão */
+}
+
+.btn {
+    height: 30px;
+    width: 150px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    text-align: left;
+}
+
+.btn:hover {
+    background-color: blue;
+    color: white;
+}

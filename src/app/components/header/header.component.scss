@@ -1,0 +1,62 @@
+.header-container {
+    width: 82vw;
+    margin-left: 3px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    height: 50px;
+    justify-content: space-between;
+
+    h1 {
+        margin-left: 15px;
+    }
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-loja {
+    height: 30px;
+    width: 130px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: rgba(255, 166, 0, 0.053);
+    color: black;
+    cursor: pointer;
+    text-align: left;
+    padding: 0px 10px;
+
+    img {
+        width: 15px;
+        float: right;
+        padding-top: 2px;
+    }
+}
+
+.img-1 {
+    width: 20px;
+}
+
+.img-2 {
+    width: 35px;
+    margin-right: 5px;
+}
+
+.route {
+    display: flex;
+    align-items: center;
+    margin-top: 3px;
+    background-color: white;
+    height: 30px;
+
+    p {
+        margin-left: 15px;
+    }
+}
