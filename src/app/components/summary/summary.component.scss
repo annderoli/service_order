@@ -2,14 +2,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 10px 0px;
 
     h1 {
         margin-left: 25px;
+        font-size: 25px;
     }
 
     button{
-        height: 40px;
-        width: 180px;
+        height: 35px;
+        width: 150px;
         font-size: 16px;
         border: none;
         border-radius: 6px;
@@ -36,18 +38,22 @@
 
     h1{
         margin-left: 20px;
+        font-size: 25px;
     }
 
     .total {
         position: absolute;
         left: 20px;
-        bottom: 15px;
+        bottom: 5px;
+        font-size: 18px;
     }
 
     .semana {
         position: absolute;
         right: 20px;
-        bottom: 15px;
+        bottom: 10px;
+        color: grey;
+        font-size: 13px;
     }
     
 }

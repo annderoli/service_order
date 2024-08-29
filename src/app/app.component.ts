@@ -14,7 +14,6 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     HeaderComponent, 
     SummaryComponent,
     DashboardComponent
-
   ],
 
   templateUrl: './app.component.html',
