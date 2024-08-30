@@ -4,6 +4,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SummaryComponent } from './components/summary/summary.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     MenuComponent, 
     HeaderComponent, 
     SummaryComponent,
-    DashboardComponent
+    DashboardComponent,
+    ModalComponent
   ],
 
   templateUrl: './app.component.html',
@@ -21,4 +23,5 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 })
 export class AppComponent {
   title = 'service_order';
+
 }

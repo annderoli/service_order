@@ -1,0 +1,33 @@
+<ng-container *ngIf="isVisible">
+
+    <div class="overlay" (click)="closeModal()"></div>
+  
+    <div class="modal">
+      <button class="close" (click)="closeModal()">Fechar Modal</button>
+
+      <div class="menu-modal">
+
+        <h1>Orçamento</h1>
+        <h1>Step 1</h1>
+        <p>Insira os dados Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eius veritatis</p>
+
+        <img class="num-menu" src="assets/num1.png" alt="">
+        <div class="line-container">
+            <hr>
+        </div>
+        <img class="num-menu" src="assets/num2.png" alt="">
+        <div class="line-container">
+            <hr>
+        </div>
+        <img class="num-menu" src="assets/num3.png" alt="">
+
+      </div>
+    
+
+      </div>
+
+
+
+      <div class="body-modal"></div>
+    
+  </ng-container>
