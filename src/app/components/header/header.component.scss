@@ -1,24 +1,16 @@
-.header-container {
-    width: 82vw;
-    margin-left: 3px;
-}
-
 .nav {
-    display: flex;
-    align-items: center;
     background-color: white;
-    height: 50px;
+    display: flex;
     justify-content: space-between;
-
-    h1 {
-        margin-left: 15px;
-    }
+    padding: 5px 20px;
+    
 }
 
 .nav-right {
     display: flex;
     align-items: center;
     gap: 20px;
+    right: 0;
 }
 
 .btn-loja {
@@ -55,8 +47,5 @@
     margin-top: 3px;
     background-color: white;
     height: 30px;
-
-    p {
-        margin-left: 15px;
-    }
+    padding: 0px 20px;
 }

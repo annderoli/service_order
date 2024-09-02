@@ -1,23 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ModalComponent } from '../modal/modal.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-summary',
   standalone: true,
-  imports: [ModalComponent],
+  imports: [ModalComponent, CommonModule],
   templateUrl: './summary.component.html',
   styleUrl: './summary.component.scss'
 })
 export class SummaryComponent {
-
-  modalVisible = false;
-
-  openModal() {
-    this.modalVisible = true; // Define visibilidade do modal como verdadeiro
-  }
-
-  closeModal() {
-    this.modalVisible = false; // Define visibilidade do modal como falso
-  }
 
 }

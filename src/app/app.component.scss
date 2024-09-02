@@ -1,9 +1,7 @@
 .container {
-    display: flex;
-}
-
-.dash {
+    display: grid;
+    height: 100vh;
+    width: 100%;
     background-color: lightgray;
-    height: 95vh;
-
+    grid-template-columns: auto 1fr;
 }
