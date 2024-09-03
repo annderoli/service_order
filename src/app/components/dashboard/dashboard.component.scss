@@ -1,70 +1,47 @@
-.dash-container {
-    display: flex;
-    
-}
-
 
 .img-relogio {
-    width: 50px;
-    margin: auto;
-    margin-top: 10%;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    width: 50%;
+    text-align: center;
+
+    img {
+        width: 50px;
+        height: 50px;
+    }
 }
 
-.summary {
+ 
+
+.card-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    text-align: start;
+    gap: 20px;
+
+    img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.card1 {
+    padding: 18px 20px;
+    display: flex;
+    background-color: blueviolet;
+    color: white;
+    gap: 10px;
     align-items: center;
-    margin: 10px 0px;
-
-    h1 {
-        margin-left: 25px;
-    }
-
-    button{
-        height: 35px;
-        width: 150px;
-        font-size: 16px;
-        border: none;
-        border-radius: 6px;
-        background-color: blue;
-        color: white;
-        cursor: pointer;
-        margin-right: 25px;
-    }
 }
 
-.box-container {
+.card2 {
+    padding: 20px 20px;
     display: flex;
-    justify-content: space-between;
-    margin: 0px 25px;
-
-}
-
-.box {
-    position: relative;
-    background-color: white;
-    height: 150px;
-    width: 320px;
-    border-radius: 6px;
-
-    h1{
-        margin-left: 20px;
-        font-size: 25px;
-    }
-
-    .total {
-        position: absolute;
-        left: 20px;
-        bottom: 5px;
-        font-size: 18px;
-    }
-
-    .semana {
-        position: absolute;
-        right: 20px;
-        bottom: 10px;
-        color: grey;
-        font-size: 13px;
-    }
-    
+    background-color:rgb(253, 193, 90);
+    color: white;
+    gap: 10px;
+    align-items: center;
 }

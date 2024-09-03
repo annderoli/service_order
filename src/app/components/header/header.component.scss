@@ -1,51 +1,30 @@
 .nav {
-    background-color: white;
     display: flex;
-    justify-content: space-between;
-    padding: 5px 20px;
-    
-}
-
-.nav-right {
-    display: flex;
+    background-color: rgb(244, 244, 244);
+    padding: 5px 10px;
     align-items: center;
-    gap: 20px;
-    right: 0;
-}
 
-.btn-loja {
-    height: 30px;
-    width: 130px;
-    font-size: 16px;
-    border: none;
-    border-radius: 6px;
-    background-color: rgba(255, 166, 0, 0.053);
-    color: black;
-    cursor: pointer;
-    text-align: left;
-    padding: 0px 10px;
-
-    img {
-        width: 15px;
-        float: right;
-        padding-top: 2px;
+    h1 {
+        margin: auto;
+        margin-top: 5px;
     }
 }
 
+.nav-right {
+    position: fixed;
+    display: flex;
+    right: 0;
+    gap: 10px;
+    align-items: center;
+    padding-right: 20px;
+}
+
 .img-1 {
-    width: 20px;
+    width: 25px;
+    height: 25px;
 }
 
 .img-2 {
     width: 35px;
     margin-right: 5px;
-}
-
-.route {
-    display: flex;
-    align-items: center;
-    margin-top: 3px;
-    background-color: white;
-    height: 30px;
-    padding: 0px 20px;
 }
