@@ -35,6 +35,12 @@
     color: white;
     gap: 10px;
     align-items: center;
+    cursor: pointer;
+
+    input {
+        display: none;
+        
+    }
 }
 
 .card2 {
