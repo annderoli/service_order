@@ -3,6 +3,7 @@ import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/rou
 import { MenuComponent } from './components/menu/menu.component';
 import { HeaderComponent } from './components/header/header.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { FormComponent } from './components/form/form.component';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     RouterLink,
     RouterLinkActive,
     HeaderComponent,
-    DashboardComponent
+    DashboardComponent,
+    FormComponent
   ],
 
   templateUrl: './app.component.html',
