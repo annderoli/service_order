@@ -1,27 +1,21 @@
 import { Component } from '@angular/core';
-import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { MenuComponent } from './components/menu/menu.component';
-import { HeaderComponent } from './components/header/header.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { FormComponent } from './components/form/form.component';
+import { RouterOutlet } from '@angular/router';
+import { HomeComponent } from './components/home/home.component';
+import { AddServiceComponent } from "./components/add-service/add-service.component";
+import { AddClientComponent } from './components/add-client/add-client.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    RouterOutlet, 
-    MenuComponent,
-    RouterLink,
-    RouterLinkActive,
-    HeaderComponent,
-    DashboardComponent,
-    FormComponent
-  ],
-
+    RouterOutlet,
+    HomeComponent,
+    AddServiceComponent,
+    AddClientComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'service_order';
-
 }

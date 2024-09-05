@@ -40,8 +40,5 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
-
-#dir
-/public
-db.json
+public
 

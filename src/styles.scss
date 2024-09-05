@@ -1,19 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --prymary-color: #01036D;
+    --text-color: dimgray;
+    --secundary-color: #00B4D8;
+    --bg: aliceblue;
+}
 
-*{
+img {
+    width: 20px;
+    height: 20px;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+}
 
-    h1, h3 {
-        font-size: 14px;
-    }
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: aliceblue;
+}
 
-    
+h1 {
+    font-size: x-large;
+    color: var(--prymary-color);
+}
 
-    p {
-        font-size: 10px;
+p {
+    font-size: medium;
+    color: var(--prymary-color);
+}
 
-    }
+button {
+    background-color: var(--prymary-color);
+    box-shadow: 0px 0.5px 3px var(--prymary-color);
+    border: none;
+}
+
+input {
+    border: none;
+    box-shadow: 0px 0.5px 5px var(--prymary-color);
+    border-radius: 8px;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
 }

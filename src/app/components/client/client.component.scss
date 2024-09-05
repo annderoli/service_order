@@ -1,0 +1,71 @@
+.header {
+    display: flex;
+    background-color: rgba(137, 43, 226, 0.5);
+    padding: 10px 20px;
+    gap: 30px;
+    align-items: center;
+}
+
+.clientes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50% 20px;
+}
+
+.search {
+    position: relative;
+    text-align: start;
+    width: 100%;
+
+    input {
+        cursor: pointer;
+        border: none;
+        background-color: rgba(137, 43, 226, 0.5);
+        color: white;
+        border-radius: 12px;
+        padding: 10px 10px;
+        width: 100%;
+
+    }
+
+    img {
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.cadastro {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30%;
+    align-items: center;
+    text-align: center;
+
+    img {
+        margin-bottom: 10px;
+    }
+
+    
+}
+
+button {
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    width: 50%;
+    padding: 10px 0px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(137, 43, 226, 0.5);
+    padding: 30px 0px;
+}
