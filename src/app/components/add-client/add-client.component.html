@@ -1,52 +1,69 @@
-<img (click)="goToHome()" class="back" src="assets/chevron-left.png">
+<app-header></app-header>
 
-<form class="form">
 
-    <h1 class="title">Novo Cliente</h1>
+<div class="container">
 
-    <input placeholder="Qual o Nome do cliente?" type="text" >
+    
 
-    <div class="niver">
+        <div class="title">
+    
+            <img (click)="goToHome()" src="assets/left-white.png" style="cursor: pointer;">
 
-        <div class="img-bolo">
-        <img src="assets/niver.png"> 
-        <p>Aniversário</p> 
+            <h1>Novo Cliente</h1>
+        
         </div>
 
-        <input type="date">
-
-    </div>
-
+        <form>
     
-
-    <input placeholder="CPF" type="text">
-    <input placeholder="CPF" type="text">
-
-    <p>Telefone e e-mail</p>
-    <input placeholder="E-mail" type="text" >
-    <input placeholder="Telefone com DDD" type="text" >
-
-    <p>Endereço</p>
-    <input placeholder="CEP" type="text">
-    <input placeholder="Logradouro" type="text" >
-
-    <span class="double">
-        <input placeholder="Número" type="text" >
-        <input placeholder="Complemento" type="text">
-    </span>
+        <input placeholder="Qual o Nome do cliente?" type="text" >
     
-    <input placeholder="Bairro" type="text" >
-    <input placeholder="Cidade" type="text" >
-    <input placeholder="Estado" type="text">
+        <div class="niver">
+    
+            <div class="img-bolo">
+                <img src="assets/niver.png"> 
+                <p>Aniversário</p> 
+            </div>
+    
+            <input type="date">
+    
+        </div>
+    
+        
+    
+        <input placeholder="CPF" type="text">
+        <input placeholder="CPF" type="text">
+    
+        <p>Telefone e e-mail</p>
+        <input placeholder="E-mail" type="text" >
+        <input placeholder="Telefone com DDD" type="text" >
+    
+        <p>Endereço</p>
+        <input placeholder="CEP" type="text">
+        <input placeholder="Logradouro" type="text" >
+    
+        <span class="double">
+            <input placeholder="Número" type="text" >
+            <input placeholder="Complemento" type="text">
+        </span>
+        
+        <input placeholder="Bairro" type="text" >
+        <input placeholder="Cidade" type="text" >
+        <input placeholder="Estado" type="text">
+    
+        <p>Observações</p>
+        <input placeholder="Opcional" type="text" >
+    
+        <button class="btn-salvar" (click)="save()"><img src="assets/sum.png" alt="">Salvar</button>
+    
+    </form>
 
-    <p>Observações</p>
-    <input placeholder="Opcional" type="text" >
 
-    <input class="btn-submit" type="submit" value="Salvar">
+</div>
 
-</form>
 
-<div class="gap"></div>
+
+
+<app-footer></app-footer>
 
 
 

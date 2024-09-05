@@ -1,33 +1,27 @@
-.header {
-    width: 100%;
-    padding: 20px 0px;
-    background-color: var(--prymary-color);
-    justify-content: center;
-
-    h1 {
-        margin: 0px 20px;
-        color: white;
-    }
-
-    img {
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        right: 20px;
-        top: 20px;
-    }
+.img-home {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
 }
-
 .container {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: start;
-    gap:30px;
+}
+
+.title {
+    display: flex;
+    color: white;
+    z-index: 1;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .card {
+    margin-top: 80px;
     padding: 0px 40px;
     height: 100px;
     display: flex;
@@ -71,7 +65,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    margin-top: 40px;
+    margin-top: 30px;
 
     img {
         width: 25px;
@@ -82,10 +76,10 @@
 .menu-container {
     background-color: var(--prymary-color);
     position: fixed;
-    bottom: 50px;
+    bottom: 30px;
     right: 0;
     left: 0;
-    padding: 20px 20px 10px 20px;
+    padding: 8px 20px 10px 20px;
     
     ul {
         display: flex;
@@ -102,33 +96,10 @@
         }
 
         img {
-            width: 25px;
-            height: 25px;
-        }
-      }
-  }
-
-  .footer {
-    background-color: var(--prymary-color);
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    padding: 20px 70px 0px 70px;
-    margin-bottom: -10px;
-    
-    ul {
-        display: flex;
-        justify-content: space-between;
-        list-style: none;
-
-        li {
-            cursor: pointer;
-        }
-
-        img {
             width: 20px;
             height: 20px;
         }
       }
   }
+
+  

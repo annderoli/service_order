@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { HeaderComponent } from '../header/header.component';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-order',
   standalone: true,
-  imports: [],
+  imports: [HeaderComponent, FooterComponent],
   templateUrl: './order.component.html',
   styleUrl: './order.component.scss'
 })
@@ -27,6 +29,12 @@ export class OrderComponent {
   goToServices() {
 
     this.router.navigate(['services'])
+
+  }
+
+  save() {
+
+    this.router.navigate(['save'])
 
   }
 

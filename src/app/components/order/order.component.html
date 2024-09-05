@@ -1,15 +1,23 @@
-<div class="header">
+<app-header></app-header>
 
-    <img (click)="goToHome()" src="assets/esquerda.png" style="cursor: pointer;">
-    <h1>Novo Orçamento</h1>
+<div class="container">
 
-</div>
+    <div class="title">
+        <img class="img-back" (click)="goToHome()" src="assets/left-white.png">
+        <h1>Novo Orçamento</h1>
 
-<div class="btn-container">
-    <button (click)="goToClients()"><img src="assets/mais.png"> Cliente</button>
-    <button (click)="goToServices()"><img src="assets/mais.png">Adicionar Serviços</button>  
-    <button><img src="assets/mais.png">Adicionar produtos</button>
-    <button><img src="assets/mais.png">Despesas Adicionais</button>
+    </div>
+
+    <button class="btn" (click)="goToClients()"><img src="assets/mais-blue.png"> Cliente</button>
+    <button class="btn" (click)="goToServices()"><img src="assets/mais-blue.png">Adicionar Serviços</button>
+
+    <div class="observacoes">
+        <input class="observacoes" type="text" value="Observações importantes" >
+        <img src="assets/balao.png" alt="">
+        
+    </div>
+
+    
 
 </div>
 
@@ -26,6 +34,6 @@
 
 </div>
 
-<div class="footer">
+<button class="btn-order" (click)="save()"><img src="assets/sum.png" alt="">Salvar</button>
 
-</div>
+<app-footer></app-footer>

@@ -1,17 +1,19 @@
-<div class="header">
+<app-header></app-header>
 
-    <img (click)="goToHome()" src="assets/esquerda.png" style="cursor: pointer;">
-    <h1>Novo Orçamento</h1>
+<div class="container">
 
-</div>
+    <div class="title">
 
-<div class="clientes-container">
+        <img (click)="goToHome()" src="assets/left-white.png" style="cursor: pointer;">
+        <h1>Clientes</h1>
+    
+    </div>
 
     <h1>Clientes</h1>
 
     <div class="search">
       <input type="search" name="" value="Digite para buscar">
-      <img src="assets/lupa-white.png" alt="">
+      <img src="assets/lupa.png" alt="">
         
     </div>
     
@@ -24,11 +26,9 @@
     </div>
     
 
-    <button (click)="addClient()"> Adicionar Clientes</button>
+    <button class="btn-clients" (click)="addClient()"> Adicionar Clientes</button>
 </div>
 
-<div class="footer">
-
-</div>
+<app-footer></app-footer>
 
 

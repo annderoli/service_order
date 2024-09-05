@@ -1,16 +1,31 @@
-.header {
-    display: flex;
-    background-color: rgba(137, 43, 226, 0.5);
-    padding: 10px 20px;
-    gap: 30px;
-    align-items: center;
-}
-
-.clientes-container {
+.container {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    padding: 50% 20px;
+    width: 100%;
+    gap: 10px;
+}
+
+.title {
+    display: flex;
+    color: white;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px 40px 0px;
+
+
+    h1 {
+        color: white;
+    }
+
+    img {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        cursor: pointer;
+    }
 }
 
 .search {
@@ -21,10 +36,10 @@
     input {
         cursor: pointer;
         border: none;
-        background-color: rgba(137, 43, 226, 0.5);
-        color: white;
+        background-color: white;
+        color: var(--prymary-color);
         border-radius: 12px;
-        padding: 10px 10px;
+        padding: 15px 10px;
         width: 100%;
 
     }
@@ -51,21 +66,21 @@
     
 }
 
-button {
-    background-color: blueviolet;
-    color: white;
-    border: none;
-    border-radius: 12px;
+.btn-clients {
     width: 50%;
+    display: flex;
     padding: 10px 0px;
-    margin: auto;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-}
+    margin: 200px auto;
 
-.footer {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    background-color: rgba(137, 43, 226, 0.5);
-    padding: 30px 0px;
+    img {
+        width: 20px;
+        height: 20px;
+    }
 }
