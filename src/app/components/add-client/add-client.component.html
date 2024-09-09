@@ -1,17 +1,16 @@
 <app-header></app-header>
 
-
 <div class="container">
-
-    
 
         <div class="title">
     
-            <img (click)="goToHome()" src="assets/left-white.png" style="cursor: pointer;">
+            <img (click)="goToClient()" src="assets/left-white.png" style="cursor: pointer;">
 
             <h1>Novo Cliente</h1>
         
         </div>
+
+        <div class="space" ></div>
 
         <form>
     
@@ -27,9 +26,7 @@
             <input type="date">
     
         </div>
-    
         
-    
         <input placeholder="CPF" type="text">
         <input placeholder="CPF" type="text">
     
@@ -42,13 +39,16 @@
         <input placeholder="Logradouro" type="text" >
     
         <span class="double">
-            <input placeholder="Número" type="text" >
+            <input class="num" placeholder="Número" type="text" >
             <input placeholder="Complemento" type="text">
         </span>
         
         <input placeholder="Bairro" type="text" >
+
+        <div class="double">
         <input placeholder="Cidade" type="text" >
-        <input placeholder="Estado" type="text">
+        <input class="uf" placeholder="Estado" type="text">
+        </div>
     
         <p>Observações</p>
         <input placeholder="Opcional" type="text" >
@@ -57,11 +57,7 @@
     
     </form>
 
-
 </div>
-
-
-
 
 <app-footer></app-footer>
 

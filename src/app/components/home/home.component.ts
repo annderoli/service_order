@@ -29,4 +29,14 @@ export class HomeComponent {
     this.router.navigate(['/order']);
   }
 
+  goToClient() {
+    console.log('Botão clicado! Navegando para Serviços.');
+    this.router.navigate(['/clients']);
+  }
+
+  goToService() {
+    console.log('Botão clicado! Navegando para Serviços.');
+    this.router.navigate(['/services']);
+  }
+
 }

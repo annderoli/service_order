@@ -1,7 +1,7 @@
 <app-header></app-header>
 
 
-<img class="img-home" src="assets/mais-white.png" alt="">
+<img (click)="goToOrder()" class="img-home" src="assets/mais-white.png" alt="">
 
 <div class="container">
 
@@ -45,17 +45,17 @@
 <div class="menu-container">
 
     <ul>
-            <li class="items">
+            <li (click)="goToOrder()" class="items">
                 <img src="assets/order-white.png">
                 <p>Orçamentos</p>
             </li>
 
-            <li class="items">
+            <li (click)="goToClient()" class="items">
                 <img src="assets/client-white.png">
                 <p>Clientes</p>
             </li>
 
-            <li class="items">
+            <li (click)="goToService()" class="items">
                 <img src="assets/tool-white.png">
                 <p>Serviços</p>
             </li>

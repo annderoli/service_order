@@ -1,8 +1,18 @@
-<img class="back" (click)="goToHome()" src="assets/chevron-left.png">
+<app-header></app-header>
+
+<div class="title">
+    
+    <img (click)="goToService()" src="assets/left-white.png" style="cursor: pointer;">
+
+    <h1>Novo Cliente</h1>
+
+</div>
+
+<div class="space" ></div>
 
 <form class="form">
 
-    <h1 class="title">Novo Serviço</h1>
+    <h1 class="title-form">Novo Serviço</h1>
 
     <input placeholder="Qual o Serviço?" class="servico" type="text" >
     <input placeholder="Detalhes do serviço" class="detalhes" type="text" >
@@ -10,4 +20,6 @@
 
 </form>
 
-<input class="btn-submit" type="submit" value="Salvar">
+<button class="btn-salvar" (click)="save()"><img src="assets/sum.png" alt="">Salvar</button>
+
+<app-footer></app-footer>

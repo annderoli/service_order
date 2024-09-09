@@ -1,1 +1,32 @@
-<p>service works!</p>
+<app-header></app-header>
+
+<div class="container">
+
+    <div class="title">
+
+        <img (click)="goToOrder()" src="assets/left-white.png" style="cursor: pointer;">
+        <h1>Serviços</h1>
+    
+    </div>
+
+    <h1>Consultar Serviços</h1>
+
+    <div class="search">
+      <input type="search" name="" value="Digite para buscar um serviço">
+      <img src="assets/lupa.png" alt="">
+        
+    </div>
+
+    <div class="cadastro">
+        <img src="assets/caixa.png" style="width: 90px; height: 80px;">
+        <p style="font-weight: bold;">Cadastro de Serviços</p>
+        <p>Você ainda não tem serviços <br>cadastrados</p>
+
+    </div>
+        <button class="btn-clients" (click)="addService()"> Adicionar Novo Serviço</button>
+</div>
+
+<app-footer></app-footer>
+
+
+

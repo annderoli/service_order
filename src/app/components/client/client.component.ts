@@ -24,6 +24,12 @@ export class ClientComponent {
     this.router.navigate(['add-client'])
   }
 
+  goToOrder() {
+
+    this.router.navigate(['order'])
+
+  }
+
 
 
 }

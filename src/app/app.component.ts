@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { AddServiceComponent } from "./components/add-service/add-service.component";
 import { AddClientComponent } from './components/add-client/add-client.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,8 @@ import { AddClientComponent } from './components/add-client/add-client.component
     RouterOutlet,
     HomeComponent,
     AddServiceComponent,
-    AddClientComponent
+    AddClientComponent,
+    FormsModule
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
