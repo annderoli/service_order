@@ -1,8 +1,18 @@
 export class Client {
 
-    id : number = 0;
+    id : string = '';
     nome : string = '';
-    idade : number = 0;
-    cidade : string = '';
+    telefone : string = '';
+    email : string = '';
+    cpf: string = '';
+    aniversario: string = '';
+    cep: string = '';
+    rua: string = '';
+    numero: string = '';
+    complemento: string = '';
+    bairro: string = '';
+    cidade: string = '';
+    estado: string = '';
+    obs: string = '';
 
 }

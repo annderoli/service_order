@@ -1,39 +1,65 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { HeaderComponent } from '../header/header.component';
-import { FooterComponent } from '../footer/footer.component';
-import { Client } from '../../model/Client';
-import { ClientService } from '../../services/client.service';
+import { Component, OnInit } from "@angular/core";
+import { FooterComponent } from "../footer/footer.component";
+import { CommonModule } from "@angular/common";
+import { FormsModule } from "@angular/forms";
+import { HeaderComponent } from "../header/header.component";
+import { Router } from "@angular/router";
+import { ClientService } from "../../services/client.service";
+import { Client } from "../../model/Client";
+
 
 @Component({
   selector: 'app-add-client',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent],
+  imports: [HeaderComponent, FooterComponent, CommonModule, FormsModule],
   templateUrl: './add-client.component.html',
   styleUrl: './add-client.component.scss'
 })
-export class AddClientComponent {
+export class AddClientComponent implements OnInit {
 
   constructor(private router : Router, private service : ClientService ) {}
 
-  //objeto client
-  client = new Client();
+    //JSON de clientes
+    clients : Client[] = [];
 
-  //JSON Clientes 
-  clients : Client[] = [];
+    //Novo objeto
+    client = new Client();
+  
+    // Método de seleção
+    getClient() : void {
+  
+      this.service.getClient()
+      .subscribe(
+        data => this.clients = data);
+  
+    }
 
-  //Método de seleção
-  select() : void {
-  
-  this.service.select().subscribe(returns => this.clients = returns)
-  
+    // Método de cadastro
+   postClient() : void {
+
+    this.service.postClient(this.client)
+    .subscribe(
+      data => { 
+
+        // Cadastra o cliente no vetor
+        this.clients.push(data); 
+
+        // LImpar Formulario
+        this.client = new Client()
+
+        // Mensagem
+        alert('Cliente cadastrado com sucesso!!!')
+      } );
+
   }
 
-  //Método de inicialização
-  ngOnInit(){
-    this.select();
-  }
+  //Inicializa
+  ngOnInit() {
 
+    this.getClient();
+    
+  }
+  
   goToHome() {
 
     this.router.navigate([''])

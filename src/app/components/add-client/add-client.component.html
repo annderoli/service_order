@@ -1,4 +1,4 @@
-<app-header></app-header>
+
 
 <div class="container">
 
@@ -6,15 +6,19 @@
     
             <img (click)="goToClient()" src="assets/left-white.png" style="cursor: pointer;">
 
-            <h1>Novo Cliente</h1>
+            <h1 *ngFor="let c of clients"></h1>
         
         </div>
 
         <div class="space" ></div>
 
         <form>
-    
-        <input placeholder="Qual o Nome do cliente?" type="text" >
+
+        <p>Nome, Telefone, E-mail e CPF</p>
+        <input placeholder="Qual o Nome do cliente?" type="text" name="nome" [(ngModel)]="client.nome">
+        <input placeholder="Telefone com DDD" type="text" name="telefone" [(ngModel)]="client.telefone">
+        <input placeholder="E-mail" type="text" name="email" [(ngModel)]="client.email">
+        <input placeholder="CPF" type="text" name="cpf" [(ngModel)]="client.cpf">
     
         <div class="niver">
     
@@ -23,37 +27,30 @@
                 <p>Aniversário</p> 
             </div>
     
-            <input type="date">
+            <input type="date" name="aniversario" [(ngModel)]="client.aniversario">
     
         </div>
-        
-        <input placeholder="CPF" type="text">
-        <input placeholder="CPF" type="text">
-    
-        <p>Telefone e e-mail</p>
-        <input placeholder="E-mail" type="text" >
-        <input placeholder="Telefone com DDD" type="text" >
     
         <p>Endereço</p>
-        <input placeholder="CEP" type="text">
-        <input placeholder="Logradouro" type="text" >
+        <input placeholder="CEP" type="text" name="cep" [(ngModel)]="client.cep">
+        <input placeholder="Rua" type="text" name="rua" [(ngModel)]="client.rua">
     
         <span class="double">
-            <input class="num" placeholder="Número" type="text" >
-            <input placeholder="Complemento" type="text">
+            <input class="num" placeholder="Número" type="text" name="numero" [(ngModel)]="client.numero">
+            <input placeholder="Complemento" type="text" name="complemento" [(ngModel)]="client.complemento">
         </span>
         
-        <input placeholder="Bairro" type="text" >
+        <input placeholder="Bairro" type="text" name="bairro" [(ngModel)]="client.bairro">
 
         <div class="double">
-        <input placeholder="Cidade" type="text" >
-        <input class="uf" placeholder="Estado" type="text">
+        <input placeholder="Cidade" type="text" name="cidade" [(ngModel)]="client.cidade">
+        <input class="uf" placeholder="Estado" type="text" name="estado" [(ngModel)]="client.estado">
         </div>
     
         <p>Observações</p>
-        <input placeholder="Opcional" type="text" >
+        <input placeholder="Opcional" type="text" name="obs" [(ngModel)]="client.obs" >
     
-        <button class="btn-salvar" (click)="save()"><img src="assets/sum.png" alt="">Salvar</button>
+        <button class="btn-salvar" (click)="postClient()"><img src="assets/sum.png" alt="">Salvar</button>
     
     </form>
 

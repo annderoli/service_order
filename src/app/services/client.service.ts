@@ -8,14 +8,20 @@ import { Client } from '../model/Client';
 })
 export class ClientService {
 
-  //Url da API 
-  private url : string = 'http://localhost:8080';
+  private url = 'http://localhost:3000/clients'
 
-  constructor(private http: HttpClient) { }
+  constructor(private http : HttpClient) { }
 
-  // Método para selecionar os clientes
-  select():Observable<Client[]>{
+  // Método para buscar todos os clientes
+  getClient(): Observable< Client[] > {
 
-    return this.http.get<Client[]>(this.url);
+    return this.http.get< Client[] >( this.url );
   }
+
+  // Método para buscar todos os clientes
+  postClient( obj : Client) : Observable < Client > {
+
+    return this.http.post< Client >( this.url, obj);
+  }
+  
 }
