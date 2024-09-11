@@ -1,9 +1,8 @@
 .header {
-    position: fixed;
-    top: 0;
     display: flex;
     width: 100%;
     padding: 30px 0px;
     background-color: var(--prymary-color);
     justify-content: center;
+    z-index: 0;
 }
