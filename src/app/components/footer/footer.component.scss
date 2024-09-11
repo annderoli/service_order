@@ -1,24 +1,30 @@
 .footer {
-    background-color: var(--prymary-color);
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    padding: 5px 50px 0px 50px;
-    margin-bottom: -15px;
+        position: fixed;
+        width: 100%;
+        background-color: var(--prymary-color);
+        bottom: 0;
+        left: 0;
+        right: 0;
+        
+        ul {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            padding: 5px 30px;
+            text-align: center;
     
-    ul {
-        display: flex;
-        justify-content: space-between;
-        list-style: none;
-
-        li {
-            cursor: pointer;
-        }
-
-        img {
-            width: 20px;
-            height: 20px;
-        }
+            li {
+                cursor: pointer;
+            }
+            
+            p {
+                color: white;
+            }
+    
+            img {
+                width: 20px;
+                height: 20px;
+            }
+          }
       }
-  }
+    

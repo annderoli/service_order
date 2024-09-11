@@ -6,6 +6,7 @@ import { HeaderComponent } from "../header/header.component";
 import { Router } from "@angular/router";
 import { ClientService } from "../../services/client.service";
 import { Client } from "../../model/Client";
+import { ToastrService } from "ngx-toastr";
 
 
 @Component({
@@ -15,50 +16,34 @@ import { Client } from "../../model/Client";
   templateUrl: './add-client.component.html',
   styleUrl: './add-client.component.scss'
 })
-export class AddClientComponent implements OnInit {
+export class AddClientComponent {
 
-  constructor(private router : Router, private service : ClientService ) {}
+  constructor(
+    private router : Router, 
+    private clientService : ClientService,
+   private toastr: ToastrService ) {}
 
-    //JSON de clientes
-    clients : Client[] = [];
+//JSON de clientes
+clients : Client[] = [];
 
-    //Novo objeto
-    client = new Client();
-  
-    // Método de seleção
-    getClient() : void {
-  
-      this.service.getClient()
-      .subscribe(
-        data => this.clients = data);
-  
-    }
+//Novo objeto
+client = new Client();
 
-    // Método de cadastro
-   postClient() : void {
-
-    this.service.postClient(this.client)
-    .subscribe(
-      data => { 
-
-        // Cadastra o cliente no vetor
-        this.clients.push(data); 
-
-        // LImpar Formulario
-        this.client = new Client()
-
-        // Mensagem
-        alert('Cliente cadastrado com sucesso!!!')
-      } );
-
-  }
-
-  //Inicializa
-  ngOnInit() {
-
-    this.getClient();
+// Método de cadastro de cliente
+postClient() : void {
+  this.clientService.postClient(this.client)
+  .subscribe(data => { 
     
-  }
+    // Cadastrar
+    this.client.push(data); });
+
+    // Limpar formulario
+    this.client = new Client();
+
+    // Mensagem
+    this.toastr.success('Cliente Cadastrado Com Sucesso!', 'Perfeito!');
+
+}
   
   goToHome() {
 

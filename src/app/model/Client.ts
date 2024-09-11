@@ -1,4 +1,7 @@
 export class Client {
+    push(data: Client) {
+      throw new Error("Method not implemented.");
+    }
 
     id : string = '';
     nome : string = '';

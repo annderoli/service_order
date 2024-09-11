@@ -2,17 +2,38 @@ import { Component } from '@angular/core';
 import { FooterComponent } from '../footer/footer.component';
 import { HeaderComponent } from '../header/header.component';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { ServiceService } from '../../services/service.service';
+import { Service } from '../../model/Service';
 
 @Component({
   selector: 'app-service',
   standalone: true,
-  imports: [HeaderComponent,FooterComponent],
+  imports: [HeaderComponent,FooterComponent, CommonModule],
   templateUrl: './service.component.html',
   styleUrl: './service.component.scss'
 })
 export class ServiceComponent {
 
-  constructor(private router : Router) {}
+constructor(private router : Router, private service : ServiceService ) {}
+
+//JSON de clientes
+services : Service[] = [];
+
+// Método GET Serviços
+getServices() : void {
+
+  this.service.getServices()
+  .subscribe(
+    data => this.services = data);
+}
+
+//Inicializa
+ngOnInit() {
+
+  this.getServices();
+  
+}
 
   goToHome() {
 
@@ -29,6 +50,7 @@ export class ServiceComponent {
     this.router.navigate(['order'])
 
   }
+
 
 
 }

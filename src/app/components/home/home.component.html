@@ -40,15 +40,9 @@
         <p>Você ainda não tem orçamentos <br>cadastrados</p>
     </div>
 
-<button class="btn" (click)="goToOrder()"><img src="assets/sum.png" alt="">Criar novo Orçamento</button>
-
 <div class="menu-container">
 
     <ul>
-            <li (click)="goToOrder()" class="items">
-                <img src="assets/order-white.png">
-                <p>Orçamentos</p>
-            </li>
 
             <li (click)="goToClient()" class="items">
                 <img src="assets/client-white.png">
@@ -62,9 +56,11 @@
     </ul>
 </div>
 
-<app-footer></app-footer>
-
 </div>
+
+<button class="btn" (click)="goToOrder()"><img src="assets/sum.png" alt="">Criar novo Orçamento</button>
+
+<app-footer></app-footer>
 
 
 

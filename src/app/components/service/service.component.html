@@ -18,13 +18,35 @@
         
     </div>
 
+    <table class="table"> 
+        <thead>
+            <tr>
+                <th>Número</th>
+                <th>Serviço</th>
+                <th>Qtd Rodas</th>
+                <th>Preço</th>
+                <th>Selecionar</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let s of services; index as i">
+                <td>{{i + 1}}</td>
+                <td>{{s.servico}}</td>
+                <td>{{s.detalhe}}</td>
+                <td>{{s.preco}}</td>
+                <td><button class="btn">Selecionar</button></td>
+
+            </tr>
+        </tbody>
+    </table>
+
     <div class="cadastro">
         <img src="assets/caixa.png" style="width: 90px; height: 80px;">
-        <p style="font-weight: bold;">Cadastro de Serviços</p>
-        <p>Você ainda não tem serviços <br>cadastrados</p>
+
+        <button class="btn" (click)="addService()"> Adicionar Novo Serviço </button>
 
     </div>
-        <button class="btn-clients" (click)="addService()"> Adicionar Novo Serviço</button>
 </div>
 
 <app-footer></app-footer>

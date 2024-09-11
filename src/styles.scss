@@ -1,3 +1,10 @@
+// Then import Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@import 'ngx-toastr/toastr';
+
+
+
 :root {
     --prymary-color: #01036D;
     --text-color: dimgray;
@@ -31,7 +38,7 @@ p {
 }
 
 button {
-    color: var(--prymary-color);
+    color: white;
     background-color: var(--prymary-color);
     box-shadow: 0px 0.5px 3px var(--prymary-color);
     border: none;

@@ -12,12 +12,12 @@
 
     <h1 class="title-form">Novo Serviço</h1>
 
-    <input placeholder="Qual o Serviço?" class="servico" type="text" >
-    <input placeholder="Detalhes do serviço" class="detalhes" type="text" >
-    <input placeholder="Preço" class="preco" type="value">
+    <input placeholder="Qual o Serviço?" class="servico" type="text" name="servico" [(ngModel)]="service.servico" >
+    <input placeholder="Detalhes do serviço" class="detalhes" type="text" name="detalhe" [(ngModel)]="service.detalhe" >
+    <input placeholder="Preço" class="preco" type="value" name="preco" [(ngModel)]="service.preco" >
 
 </form>
 
-<button class="btn-salvar" (click)="save()"><img src="assets/sum.png" alt="">Salvar</button>
+<button class="btn-salvar" (click)="postService()"><img src="assets/sum.png" alt="">Salvar</button>
 
 <app-footer></app-footer>

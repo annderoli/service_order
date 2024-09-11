@@ -7,7 +7,6 @@
     cursor: pointer;
 }
 .container {
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,9 +25,10 @@
 
 .card {
     margin-top: 80px;
-    padding: 0px 40px;
+    padding: 0px 20px;
     height: 100px;
     display: flex;
+    flex-direction: row;
     background-color: white;
     color: black;
     text-align: center;
@@ -59,17 +59,22 @@
 }
 
 .btn {
-    width: 100%;
+    position: absolute;
+    background-color: var(--prymary-color);
+    color: white;
+    width: 70%;
     display: flex;
-    padding: 10px 0px;
+    padding: 15px 10px;
     border-radius: 10px;
     border: none;
-    color: white;
     gap: 10px;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    margin-top: 30px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    bottom: 120px;
 
     img {
         width: 25px;
@@ -78,24 +83,24 @@
 }
 
 .menu-container {
+    width: 100%;
     background-color: var(--prymary-color);
     position: fixed;
-    bottom: 30px;
-    right: 0;
+    bottom: -30px;
     left: 0;
-    padding: 8px 20px 10px 20px;
+    right: 0;
     
     ul {
         display: flex;
         justify-content: space-between;
         list-style: none;
+        padding: 10px 80px;
 
         li {
             cursor: pointer;
         }
         
         p {
-            margin-top: -4px;
             color: white;
         }
 

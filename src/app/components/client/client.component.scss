@@ -3,11 +3,10 @@
     flex-direction: column;
     width: 100%;
     gap: 10px;
-    padding: 0px 20px;
 }
 
 .title {
-    position: fixed;
+    position: absolute;
     display: flex;
     color: white;
     z-index: 1;
@@ -58,35 +57,49 @@
     }
 }
 
-.cadastro {
+.btn {
+    background-color: var(--prymary-color);
     display: flex;
-    flex-direction: column;
-    margin-top: 40px;
-    align-items: center;
-    text-align: center;
-
-    img {
-        margin-bottom: 10px;
-    }
-
-    
-}
-
-.btn-clients {
-    width: 50%;
-    display: flex;
-    padding: 10px 0px;
-    border-radius: 10px;
     border: none;
     color: white;
     gap: 10px;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    margin: 50px auto;
 
     img {
         width: 20px;
         height: 20px;
+    }
+}
+
+table {
+    margin-top: 30px;
+    
+}
+
+.table > thead > tr:nth-child(2n+1)>th{
+    color: white;
+    background-color: var(--prymary-color);
+
+}
+
+.cadastro {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    right: 0;
+    left: 0;
+    bottom: 100px;
+    
+    button {
+        width: 50%;
+    }
+
+    img {
+        margin-top: 20px;
+        margin-bottom: 10px;
     }
 }
