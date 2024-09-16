@@ -28,21 +28,6 @@ services : Service[] = [];
 //Novo objeto
 service = new Service();
 
-// Método de cadastro de Serviço
-postService() : void {
-  this.serviceService.postService(this.service)
-  .subscribe(data => { 
-    
-    // Cadastrar
-    this.service.push(data); });
-
-    // Limpar formulario
-    this.service = new Service();
-
-    // Mensagem
-    this.toastr.success('Serviço Cadastrado Com Sucesso!', 'Perfeito!');
-
-}
 
   goToHome() {
 

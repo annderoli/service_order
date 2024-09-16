@@ -15,7 +15,7 @@
     align-items: center;
     left: 0;
     right: 0;
-    top: 15px;
+    top: 0;
 
 
     h1 {
@@ -28,6 +28,7 @@
         height: 20px;
         cursor: pointer;
         left: 10px;
+        top: 20px;
     }
 }
 
@@ -48,6 +49,7 @@
 }
 
 .observacoes {
+    border-radius: 8px;
     position: relative;
     text-align: start;
     width: 100%;
@@ -69,41 +71,44 @@
 }
 
 .total-container {
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
     border: none;
     box-shadow: 0px 0.5px 5px var(--prymary-color);
     position: relative;
-    margin-top: 30px;
     background-color: white;
-    height: 180px;
+    height: 20vh;
     padding: 10px 20px;
     margin: 30px 15px;
 
     .total {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 50px;
         
     }
 
     .garantia {
-        border-radius: 6px;
+        position: absolute;
+        border-radius: 8px !important;
         display: flex;
-        flex-direction: column;
         width: 150px;
         height: 70px;
         border: solid var(--prymary-color);
         text-align: center;
         justify-content: center;
-        margin: 0px auto;
+        align-items: center;
+        bottom: 20px;
+        right: 0;
+        left: 0;
+        margin: auto;
         border-color: rgba($color: #06007e, $alpha: 0.5)
     }
 }
 
 .btn-client {
     position: absolute;
-    width: 40%;
+    width: 80%;
     display: flex;
     padding: 10px 0px;
     border-radius: 10px;
@@ -112,30 +117,12 @@
     gap: 10px;
     justify-content: center;
     align-items: center;
+    text-align: center;
     cursor: pointer;
-    left: 30px;
-    bottom: 20px;
-
-    img {
-        width: 20px;
-        height: 20px;
-    }
-}
-
-.btn-service {
-    position: absolute;
-    width: 40%;
-    display: flex;
-    padding: 10px 0px;
-    border-radius: 10px;
-    border: none;
-    color: white;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    right: 30px;
-    bottom: 20px;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    margin: auto;
 
     img {
         width: 20px;

@@ -5,6 +5,7 @@ import { AddClientComponent } from './components/add-client/add-client.component
 import { OrderComponent } from './components/order/order.component';
 import { ClientComponent } from './components/client/client.component';
 import { ServiceComponent } from './components/service/service.component';
+import { EditClientComponent } from './components/edit-client/edit-client.component';
 
 export const routes: Routes = [
     { path: '' , component: HomeComponent } ,
@@ -12,5 +13,6 @@ export const routes: Routes = [
     { path: 'add-client' , component: AddClientComponent},
     { path: 'order' , component: OrderComponent},
     { path: 'clients' , component: ClientComponent},
-    { path: 'services' , component: ServiceComponent}
+    { path: 'services' , component: ServiceComponent},
+    { path: 'edit-client/:nome' , component: EditClientComponent}
 ];

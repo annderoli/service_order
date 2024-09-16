@@ -1,0 +1,15 @@
+<h1>Edição</h1>
+<button class="btn btn-dark" routerLink="/clients">Back</button>
+
+
+<div >
+    <form class="form p-4" *ngIf="client" >
+
+        <h1></h1>
+
+        <label for="nome">Nome</label>
+        <input [(ngModel)]="client.nome" name="nome" >
+        <label>Carro</label>
+        <input [(ngModel)]="client.carro" name="carro" >
+    </form>
+</div>

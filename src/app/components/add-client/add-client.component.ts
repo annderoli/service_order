@@ -28,22 +28,6 @@ clients : Client[] = [];
 
 //Novo objeto
 client = new Client();
-
-// Método de cadastro de cliente
-postClient() : void {
-  this.clientService.postClient(this.client)
-  .subscribe(data => { 
-    
-    // Cadastrar
-    this.client.push(data); });
-
-    // Limpar formulario
-    this.client = new Client();
-
-    // Mensagem
-    this.toastr.success('Cliente Cadastrado Com Sucesso!', 'Perfeito!');
-
-}
   
   goToHome() {
 

@@ -9,44 +9,20 @@
     
     </div>
 
-    <div class="search">
+    <div class="search" >
 
         <h1>Consultar Clientes</h1>
         <input type="search" name="" value="Digite para buscar um cliente">
-        <img src="assets/lupa.png" alt="">
+        <img src="assets/lupa.png" >
         
     </div>
 
-    <table class="table"> 
-        <thead>
-            <tr>
-                <th>Número</th>
-                <th>Nome</th>
-                <th>Telefone</th>
-                <th>Selecionar</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <tr *ngFor="let c of clients; index as i">
-                <td>{{i + 1}}</td>
-                <td>{{c.nome}}</td>
-                <td>{{c.telefone}}</td>
-                <td><button class="btn">Selecionar</button></td>
-
-            </tr>
-        </tbody>
-    </table>
-
-    <div class="cadastro">
-        <img src="assets/cliente-azul.png" style="width: 80px; height: 80px;">
-
-        <button class="btn" (click)="addClient()"> Adicionar Clientes</button>
-
+    <div class="card mb-2 border-primary " style="height: 150px;" *ngFor="let c of clients">
+        <h6 class="m-3">{{c.nome}}<br><br>{{c.carro}}</h6>
+        <button class="btn btn-primary position-absolute end-0 bottom-0 m-3 " (click)="goToEdit(c.nome)">Editar</button>
     </div>
     
+    
 </div>
-
-<app-footer></app-footer>
 
 

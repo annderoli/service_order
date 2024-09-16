@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AddServiceComponent } from "./components/add-service/add-service.component";
 import { AddClientComponent } from './components/add-client/add-client.component';
 import { FormsModule } from '@angular/forms';
+import { EditClientComponent } from './components/edit-client/edit-client.component';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,8 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     AddServiceComponent,
     AddClientComponent,
-    FormsModule
+    FormsModule,
+    EditClientComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
