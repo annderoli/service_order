@@ -15,7 +15,7 @@ import { FooterComponent } from "../footer/footer.component";
   styleUrl: './edit-client.component.scss'
 })
 export class EditClientComponent implements OnInit {
-  clientName! : string;
+  name! : any;
   client:any;
 
 constructor(
@@ -25,10 +25,10 @@ constructor(
   ngOnInit(): void { 
 
     this.route.paramMap.subscribe(params => { 
-      const clientName = String(this.route.snapshot.paramMap.get('nome'))
+      const name = String(this.route.snapshot.paramMap.get('nome'))
 
-      this.clientService.getName(clientName).subscribe(data => {
-        this.client = data.find(client => client.nome === clientName);
+      this.clientService.getName(name).subscribe(data => {
+        this.client = data.find(client => client.nome === name);
 
         console.log(this.client)
       })
