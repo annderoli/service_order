@@ -17,12 +17,11 @@
         
     </div>
 
-    <div class="card mb-2 border-primary " style="height: 150px;" *ngFor="let c of clients">
-        <h6 class="m-3">{{c.nome}}<br><br>{{c.carro}}</h6>
-        <button class="btn btn-primary position-absolute end-0 bottom-0 m-3 " (click)="goToEdit(c.nome)">Editar</button>
+    <div class="card border-primary p-2" *ngFor="let c of clients" (click)="goToOrder()">
+        <p class="text-light">{{c.nome}}</p>
+        <img src="assets/editar.png" class="position-absolute end-0 bottom-0 m-3" (click)="goToEdit(c.nome)">
     </div>
-    
-    
+
 </div>
 
 

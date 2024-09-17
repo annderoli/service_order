@@ -44,8 +44,6 @@ export class ClientComponent implements OnInit{
     this.getClients();
   }
 
-
-
 // Rotas Paginas
 
   goToHome() {
@@ -59,9 +57,8 @@ export class ClientComponent implements OnInit{
   }
 
   goToOrder() {
-
-    this.router.navigate(['order'])
-
+    // Passa o parâmetro 'fromClient' como true para o OrderComponent
+    this.router.navigate(['order'], { queryParams: { fromClient: true } });
   }
 
   goToEdit(nome: string) {
@@ -69,5 +66,7 @@ export class ClientComponent implements OnInit{
     this.router.navigate(['edit-client', nome])
 
   }
+
+  
 
 }

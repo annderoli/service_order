@@ -6,6 +6,7 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { ClientService } from '../../services/client.service';
 import { ClientComponent } from '../client/client.component';
 import { FooterComponent } from "../footer/footer.component";
+import { Client } from '../../model/Client';
 
 @Component({
   selector: 'app-edit-client',
@@ -14,24 +15,29 @@ import { FooterComponent } from "../footer/footer.component";
   templateUrl: './edit-client.component.html',
   styleUrl: './edit-client.component.scss'
 })
+
 export class EditClientComponent implements OnInit {
-  nome! : any;
-  client!:any;
+  client!: any;
 
-constructor(
-  private route : ActivatedRoute, 
-  private clientService : ClientService) {}
+  constructor(
+    private route: ActivatedRoute,
+    private router : Router, 
+    private clientService: ClientService) {}
 
-
- ngOnInit(): void { 
-
-  this.route.paramMap.subscribe(params => { 
-    const nome = String(this.route.snapshot.paramMap.get('nome'))
+  ngOnInit(): void {
+    const name = this.route.snapshot.paramMap.get('nome') as string;
 
     this.clientService.getClients().subscribe(data => {
-      this.client = data.find(client => client.nome === nome);
+      this.client = data.find(client => client.nome === name);
+    });
+  }
 
-      console.log(this.client); }); });
+
+// Rotas
+goToClient() {
+
+  this.router.navigate(['clients'])
+
 }
 
 }

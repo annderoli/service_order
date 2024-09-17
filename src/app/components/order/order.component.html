@@ -8,8 +8,19 @@
 
     </div>
 
-    <button class="btn" (click)="goToClients()"><img src="assets/mais-blue.png"> Adicionar Cliente</button>
-    <button class="btn" (click)="goToServices()"><img src="assets/mais-blue.png">Adicionar Serviços</button>
+    <div *ngIf="adicionar">
+
+        <button class="btn mb-4" (click)="goToClients()"><img src="assets/mais-blue.png"> Adicionar Cliente</button>
+        <button class="btn" (click)="goToServices()"><img src="assets/mais-blue.png">Adicionar Serviços</button>
+
+    </div>
+
+    <div *ngIf="adicionado">
+
+        <button class="btn mb-4" (click)="goToClients()"><img src="assets/verificar.png" >Cliente Adicionado com sucesso!</button>
+        <button class="btn" (click)="goToServices()"><img src="assets/mais-blue.png">Adicionar Serviços</button>
+
+    </div>
 
     <div class="observacoes">
         <input class="observacoes" type="text" value="Observações importantes" >
@@ -17,24 +28,19 @@
         
     </div>
 
-    
+    <div class="total-container">
 
-</div>
+        <div class="total">
+            <p style="font-weight: bold;">Total</p>
+            <p style="font-weight: bold;">R$ 0,00</p>
+        </div>
 
-<div class="total-container">
+        <div class="garantia">
+            <p>Desconto<br>R$ 0,00</p>
+        </div>
 
-    <div class="total">
-        <p style="font-weight: bold;">Total</p>
-        <p style="font-weight: bold;">R$ 0,00</p>
     </div>
 
-    <div class="garantia">
-        <p>Desconto<br>R$ 0,00</p>
-    </div>
+    <button class="btn-client" (click)="save()"><img src="assets/sum.png" alt="">Salvar Orçamento</button>
 
 </div>
-
-<button class="btn-client" (click)="save()"><img src="assets/sum.png" alt="">Salvar Orçamento</button>
-
-
-<app-footer></app-footer>
