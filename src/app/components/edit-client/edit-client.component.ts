@@ -16,7 +16,7 @@ import { FooterComponent } from "../footer/footer.component";
 })
 export class EditClientComponent implements OnInit {
   nome! : any;
-  client!:string;
+  client!:any;
 
 constructor(
   private route : ActivatedRoute, 
@@ -28,14 +28,10 @@ constructor(
   this.route.paramMap.subscribe(params => { 
     const nome = String(this.route.snapshot.paramMap.get('nome'))
 
-    this.clientService.getClient(nome).subscribe(data => {
+    this.clientService.getClients().subscribe(data => {
       this.client = data.find(client => client.nome === nome);
 
-      console.log(this.client)
-    })
-
-    
-  });
+      console.log(this.client); }); });
 }
 
 }

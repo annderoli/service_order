@@ -24,10 +24,4 @@ export class ClientService {
     return this.http.post< Client >( this.url, obj );
   }
 
-  // Clientes por parametro
-  getName(nome:String): Observable<Client[]> {
-
-    return this.http.get<Client[]>(this.url)
-
-  }
 }
