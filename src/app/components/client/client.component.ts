@@ -22,6 +22,7 @@ export class ClientComponent implements OnInit{
 
   //JSON de clientes
   clients : Client[] = [];
+  allClients : Client[] = [];
 
   constructor(
     private router : Router,  
@@ -32,11 +33,28 @@ export class ClientComponent implements OnInit{
   getClients() : void {
     this.clientService.getClients()
     .subscribe(
-      data => {
-        this.clients = data
+      (data : Client[]) => {
+        this.clients = data;
+        this.allClients = data;
       }
     );
     
+  }
+
+  search(e: Event): void {
+    const target = e.target as HTMLInputElement;
+    const value = target.value.trim();
+  
+    if (!value) {
+      // Se o valor estiver vazio, redefinir para todos os clientes
+      this.clients = [...this.allClients];
+    } else {
+      // Filtrar os clientes
+      this.clients = this.allClients.filter((data : Client) => {
+        return data.nome.toLowerCase().includes(value.toLowerCase())
+    });
+    }
+
   }
 
   // Método de Inicialização

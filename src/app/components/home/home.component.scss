@@ -24,7 +24,7 @@
 }
 
 .card {
-    margin-top: 80px;
+    margin-top: 40px;
     padding: 10px 30px;
     height: 120px;
     display: flex;
@@ -50,11 +50,9 @@
 }
 
 .img-relogio {
-    position: absolute;
-    top: 50%;
-    left: 25%;
     width: 50%;
     text-align: center;
+    margin: 30px auto;
 
     img {
         width: 50px;
@@ -63,7 +61,6 @@
 }
 
 .btn {
-    position: absolute;
     background-color: var(--prymary-color);
     color: white;
     width: 70%;
@@ -75,10 +72,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    right: 0;
-    left: 0;
     margin: auto;
-    bottom: 120px;
 
     img {
         width: 25px;
