@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { AfterViewInit, Component, OnInit } from "@angular/core";
 import { FooterComponent } from "../footer/footer.component";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
@@ -7,6 +7,10 @@ import { Router } from "@angular/router";
 import { ClientService } from "../../services/client.service";
 import { Client } from "../../model/Client";
 import { ToastrService } from "ngx-toastr";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatInputModule } from "@angular/material/input";
+import { MatDatepickerModule } from "@angular/material/datepicker";
+import { DateComponent } from "../date/date.component";
 
 
 @Component({
@@ -38,8 +42,6 @@ createClient(): void {
     this.router.navigate(['clients'])
   });
 }
-  
-
 
   // Rotas
   goToHome() {

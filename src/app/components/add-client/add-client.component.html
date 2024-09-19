@@ -11,46 +11,80 @@
         </div>
 
         <form>
-
-        <p>Nome, Telefone, E-mail e CPF</p>
-        <input placeholder="Qual o Nome do cliente?" type="text" name="nome" [(ngModel)]="client.nome">
-        <input placeholder="Telefone com DDD" type="text" name="telefone" [(ngModel)]="client.telefone">
-        <input placeholder="E-mail" type="text" name="email" [(ngModel)]="client.email">
-        <input placeholder="CPF" type="text" name="cpf" [(ngModel)]="client.cpf">
-    
-        <div class="niver">
-    
-            <div class="img-bolo">
-                <img src="assets/niver.png"> 
-                <p>Aniversário</p> 
+            <!-- Informações do Cliente-->
+            <div class="">
+              <label  class="form-label">Nome</label>
+              <input type="text" class="form-control">
             </div>
-    
-            <input type="date" name="aniversario" [(ngModel)]="client.aniversario">
-    
-        </div>
-    
-        <p>Endereço</p>
-        <input placeholder="CEP" type="text" name="cep" [(ngModel)]="client.cep">
-        <input placeholder="Rua" type="text" name="rua" [(ngModel)]="client.rua">
-    
-        <span class="double">
-            <input class="num" placeholder="Número" type="text" name="numero" [(ngModel)]="client.numero">
-            <input placeholder="Complemento" type="text" name="complemento" [(ngModel)]="client.complemento">
-        </span>
-        
-        <input placeholder="Bairro" type="text" name="bairro" [(ngModel)]="client.bairro">
+            <div class="">
+              <label class="form-label">Telefone</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="">
+                <label  class="form-label">CPF</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="">
+                <label class="form-label">Email</label>
+                <input type="text" class="form-control">
+              </div>
+            <div class="">
+                <label  class="form-label">Aniversário</label>
+                <input type="date" class="form-control" >
+            </div>
+            <!-- Informações do Veiculo-->
+            <div class="">
+                <label  class="form-label">Marca</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="">
+                <label class="form-label">Modelo</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="">
+                <label class="form-label">Ano</label>
+                <input type="text" class="form-control">
+              </div>
+            <div class="">
+                <label  class="form-label">Cor</label>
+                <input type="date" class="form-control" >
+            </div>
+            <!-- Endereço-->
+            <div class="">
+                <label class="form-label">CEP</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="">
+                <label  class="form-label">Rua</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="">
+                <label class="form-label">Número</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="">
+                <label class="form-label">Bairro</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="">
+                <label  class="form-label">Cidade</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="">
+                <label class="form-label">Estado</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="">
+              <label class="form-label">Observações</label>
+              <input type="text" class="form-control">
+            </div>
 
-        <div class="double">
-        <input placeholder="Cidade" type="text" name="cidade" [(ngModel)]="client.cidade">
-        <input class="uf" placeholder="Estado" type="text" name="estado" [(ngModel)]="client.estado">
-        </div>
-    
-        <p>Observações</p>
-        <input placeholder="Opcional" type="text" name="obs" [(ngModel)]="client.obs" >
-    
-        <button class="btn-salvar" (click)="createClient()">
-        <img src="assets/sum.png">Salvar</button >
-    
-    </form>
+            <button type="submit" 
+              (click)="createClient()"
+              class="btn btn-primary d-flex gap-3 justify-content-center mt-3">
+              <img src="assets/sum.png">Salvar Cliente
+            </button>
+
+          </form>
 
 </div>

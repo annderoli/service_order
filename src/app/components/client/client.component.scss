@@ -89,14 +89,10 @@
     gap: 20px;
 }
 
-.cards {
-    height: 150px;
+.card {
+    height: 50px;
     box-shadow: 0px 0.5px 3px var(--prymary-color);
     color: var(--prymary-color);
-
-    .tel {
-        color: var(--prymary-color);
-    }
 }
 
 .img-cards {

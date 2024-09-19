@@ -5,13 +5,15 @@ import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { ClientService } from '../../services/client.service';
 import { ClientComponent } from '../client/client.component';
-import { FooterComponent } from "../footer/footer.component";
 import { Client } from '../../model/Client';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 @Component({
   selector: 'app-edit-client',
   standalone: true,
-  imports: [HeaderComponent, CommonModule, FormsModule, ClientComponent, FooterComponent, RouterLink],
+  imports: [HeaderComponent, CommonModule, FormsModule, ClientComponent, MatFormFieldModule, MatInputModule, MatDatepickerModule],
   templateUrl: './edit-client.component.html',
   styleUrl: './edit-client.component.scss'
 })
