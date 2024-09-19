@@ -10,7 +10,7 @@ export class ServiceService {
 
   constructor(private http : HttpClient) { }
 
-  private url = 'http://localhost:3000/services'
+  private url = 'http://192.168.18.6:3000/services'
 
   // Método para buscar todos os Serviços
   getServices(): Observable< Service[] > {
