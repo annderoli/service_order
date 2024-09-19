@@ -1,9 +1,10 @@
 .container {
     display: flex;
     flex-direction: column;
-    gap: 20px 0px;
     width: 100%;
-    margin-top: 30px;
+    margin-top: 20px;
+    gap: 15px;
+    min-height: 100vh;
 }
 
 .title {
@@ -32,17 +33,27 @@
     }
 }
 
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
 .btn {
+    position: relative;
+    display: flex;
     border: none;
     background-color: white;
-    display: flex;
     width: 100%;
-    padding:20px 20px;
     text-align: start;
     align-items: center;
-    gap: 10px;
+    padding: 30px 50px;
+    color: var(--prymary-color);
+    
 
     img {
+        position: absolute;
+        left: 20px;
         width: 18px;
         height: 18px;
     }
@@ -57,7 +68,7 @@
     input {
         cursor: pointer;
         border: none;
-        padding: 50px 50px;
+        padding: 30px 50px;
         width: 100%;
         color: var(--prymary-color);
     }
@@ -97,7 +108,7 @@
         text-align: center;
         justify-content: center;
         align-items: center;
-        bottom: 20px;
+        bottom: 10px;
         right: 0;
         left: 0;
         margin: auto;
@@ -106,6 +117,10 @@
 }
 
 .btn-client {
+    position: static;
+    bottom: 0;
+    right: 0;
+    left: 0;
     width: 80%;
     display: flex;
     padding: 10px 0px;
@@ -117,7 +132,7 @@
     align-items: center;
     text-align: center;
     cursor: pointer;
-    margin: 10px auto;
+    margin: auto;
 
     img {
         width: 20px;

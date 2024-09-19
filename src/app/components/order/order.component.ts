@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
@@ -11,50 +11,45 @@ import { CommonModule } from '@angular/common';
   templateUrl: './order.component.html',
   styleUrl: './order.component.scss'
 })
-export class OrderComponent {
+export class OrderComponent implements OnInit {
 
-  constructor( private router: Router, private route : ActivatedRoute) {}
+constructor( private router: Router, private route : ActivatedRoute) {}
 
-  selectedClient: any;
+clientAdded: boolean = false;
+serviceAdded: boolean = false;
 
-  // Visibilidade
-  adicionar : boolean = true;
+//Direciona para seleciona Cliente e Serviço
+addClient() {
+  this.router.navigate(['clients']); 
+}
 
-  adicionado : boolean = false;
+addService() {
+  this.router.navigate(['services'])
+}
 
+// quando o cliente for selecionado
+onClientSelected() {
+  this.clientAdded = true; // Altera a visibilidade dos botões
+}
 
+// quando o serviço for selecionado
+onServiceSelected() {
+  this.serviceAdded = true; // Altera a visibilidade dos botões
+}
 
 ngOnInit() {
-  // Verifica o parâmetro de rota 'fromClient'
+
   this.route.queryParams.subscribe(params => {
-    if (params['fromClient']) {
-      this.adicionar = false; // Oculta os botões "Adicionar"
-      this.adicionado = true; // Exibe os botões de cliente adicionado
+    if (params['clientAdded']) {
+      this.clientAdded = true;
     }
   });
 
-
 }
-
-
-
-
   //Rotas
   goToHome() {
 
     this.router.navigate([''])
-
-  }
-
-  goToClients() {
-
-    this.router.navigate(['clients'])
-
-  }
-
-  goToServices() {
-
-    this.router.navigate(['services'])
 
   }
 

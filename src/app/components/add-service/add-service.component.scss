@@ -4,7 +4,7 @@
 }
 
 .title {
-    position: fixed;
+    position: absolute;
     display: flex;
     color: white;
     justify-content: center;
@@ -21,7 +21,7 @@
     }
 
     img {
-        position: fixed;
+        position: absolute;
         width: 20px;
         height: 20px;
         cursor: pointer;

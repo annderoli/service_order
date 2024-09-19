@@ -18,10 +18,10 @@ export class ClientService {
     return this.http.get< Client[] >( this.url );
   }
 
-  // Método para Inserir novos Clientes
-  setClient(obj: Client): Observable< Client> {
+  // Método para Criar novos Clientes
+  createClient(obj: Client): Observable< Client> {
 
     return this.http.post< Client >( this.url, obj );
   }
-
+  
 }

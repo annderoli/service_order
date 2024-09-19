@@ -28,7 +28,21 @@ services : Service[] = [];
 //Novo objeto
 service = new Service();
 
+createService(): void {
+  this.serviceService.createService(this.service).subscribe(data => {
+    this.services.push(data);
 
+    this.toastr.success('Serviço Criado Com Sucesso!', 'Parabéns!')
+
+    this.router.navigate(['services'])
+  });
+}
+
+
+
+
+
+  //Rotas
   goToHome() {
 
     this.router.navigate([''])

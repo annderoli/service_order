@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Output } from "@angular/core";
 import { HeaderComponent } from "../header/header.component";
 import { CommonModule } from "@angular/common";
 import { EditClientComponent } from "../edit-client/edit-client.component";
@@ -6,12 +6,13 @@ import { Client } from "../../model/Client";
 import { Router, RouterLink } from "@angular/router";
 import { ClientService } from "../../services/client.service";
 import { ToastrService } from "ngx-toastr";
+import { TestComponent } from "../test/test.component";
 
 
 @Component({
   selector: 'app-client',
   standalone: true,
-  imports: [HeaderComponent, CommonModule, EditClientComponent, RouterLink],
+  imports: [HeaderComponent, CommonModule, EditClientComponent, RouterLink, TestComponent],
   templateUrl: './client.component.html',
   styleUrl: './client.component.scss'
 })
@@ -29,18 +30,38 @@ export class ClientComponent implements OnInit{
     private clientService : ClientService,
     private toastr : ToastrService ) {}
 
+  // Função chamada quando o cliente for selecionado
+  addClient(client: any) {
+    // Aqui você pode fazer a lógica para capturar o cliente selecionado
+    // Após selecionar o cliente, volta para o OrderComponent
+    this.router.navigate(['order'], { queryParams: { clientAdded: true } });
+  }
+
+
+
+
+  // Método cliente especifico
+  selectClient(position : number) : void {
+    const client = this.clients[position];
+
+    this.router.navigate(['edit-client', client.nome])
+
+  }
+
   // Método GET Clientes
   getClients() : void {
-    this.clientService.getClients()
-    .subscribe(
-      (data : Client[]) => {
+    this.clientService.getClients().subscribe((data : Client[]) => {
         this.clients = data;
         this.allClients = data;
-      }
-    );
+      });
+  }
+
+  ngOnInit() {
+    this.getClients();
     
   }
 
+  // Barra de pesquisa
   search(e: Event): void {
     const target = e.target as HTMLInputElement;
     const value = target.value.trim();
@@ -57,34 +78,9 @@ export class ClientComponent implements OnInit{
 
   }
 
-  // Método de Inicialização
-  ngOnInit() {
-    this.getClients();
-  }
-
-// Rotas Paginas
-
-  goToHome() {
-
-    this.router.navigate([''])
-  }
-
-  addClient() {
-
-    this.router.navigate(['add-client'])
-  }
-
+  // Rotas Paginas
   goToOrder() {
-    // Passa o parâmetro 'fromClient' como true para o OrderComponent
-    this.router.navigate(['order'], { queryParams: { fromClient: true } });
+    this.router.navigate(['order']);
   }
-
-  goToEdit(nome: string) {
-
-    this.router.navigate(['edit-client', nome])
-
-  }
-
-  
 
 }

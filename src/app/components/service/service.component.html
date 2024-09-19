@@ -9,47 +9,23 @@
     
     </div>
 
-    
+    <div class="search" >
 
-    <div class="search">
         <h1>Consultar Serviços</h1>
-        <input type="search" name="" value="Digite para buscar um serviço">
-        <img src="assets/lupa.png" alt="">
+        <input type="search" name="" placeholder="Pesquise um cliente" (input)="search($event)">
+        <img src="assets/lupa.png" >
         
     </div>
 
-    <table class="table"> 
-        <thead>
-            <tr>
-                <th>Número</th>
-                <th>Serviço</th>
-                <th>Qtd Rodas</th>
-                <th>Preço</th>
-                <th>Selecionar</th>
-            </tr>
-        </thead>
+    <div class="card border-primary p-2" (click)="addService(i)"
+        *ngFor="let s of services; index as i" >
 
-        <tbody>
-            <tr *ngFor="let s of services; index as i">
-                <td>{{i + 1}}</td>
-                <td>{{s.servico}}</td>
-                <td>{{s.detalhe}}</td>
-                <td>{{s.preco}}</td>
-                <td><button class="btn">Selecionar</button></td>
-
-            </tr>
-        </tbody>
-    </table>
-
-    <div class="cadastro">
-        <img src="assets/caixa.png" style="width: 90px; height: 80px;">
-
-        <button class="btn" (click)="addService()"> Adicionar Novo Serviço </button>
+        <p class="text-light">{{s.servico}}</p>
+        <img src="assets/editar.png" class="position-absolute end-0 bottom-0 m-3" 
+        (click)="selectService(i)">
 
     </div>
 </div>
-
-<app-footer></app-footer>
 
 
 

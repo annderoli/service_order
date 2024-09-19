@@ -19,7 +19,7 @@ export class ServiceService {
   }
 
   // Método para Inserir novos Serviços
-  postService(obj: Service): Observable< Service> {
+  createService(obj: Service): Observable< Service> {
 
     return this.http.post< Service >( this.url, obj );
   }

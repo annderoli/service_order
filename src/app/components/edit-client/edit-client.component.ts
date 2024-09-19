@@ -17,18 +17,19 @@ import { Client } from '../../model/Client';
 })
 
 export class EditClientComponent implements OnInit {
-  client!: any;
+  client = new Client();
+  clients : Client[] = [];
 
   constructor(
     private route: ActivatedRoute,
     private router : Router, 
     private clientService: ClientService) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void{
     const name = this.route.snapshot.paramMap.get('nome') as string;
 
     this.clientService.getClients().subscribe(data => {
-      this.client = data.find(client => client.nome === name);
+      this.client = data.find(client => client.nome === name) as Client;
     });
   }
 

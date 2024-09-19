@@ -15,28 +15,15 @@ export class HomeComponent {
   constructor(private router: Router) {}
 
   goToAddService() {
-    console.log('Botão clicado! Navegando para Serviços.');
     this.router.navigate(['/add-service']);
   }
 
   goToAddClient() {
-    console.log('Botão clicado! Navegando para Serviços.');
     this.router.navigate(['/add-client']);
   }
 
   goToOrder() {
-    console.log('Botão clicado! Navegando para Serviços.');
     this.router.navigate(['/order']);
-  }
-
-  goToClient() {
-    console.log('Botão clicado! Navegando para Serviços.');
-    this.router.navigate(['/clients']);
-  }
-
-  goToService() {
-    console.log('Botão clicado! Navegando para Serviços.');
-    this.router.navigate(['/services']);
   }
 
 }

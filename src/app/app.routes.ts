@@ -6,6 +6,8 @@ import { OrderComponent } from './components/order/order.component';
 import { ClientComponent } from './components/client/client.component';
 import { ServiceComponent } from './components/service/service.component';
 import { EditClientComponent } from './components/edit-client/edit-client.component';
+import { TestComponent } from './components/test/test.component';
+import { EditServiceComponent } from './components/edit-service/edit-service.component';
 
 export const routes: Routes = [
     { path: '' , component: HomeComponent } ,
@@ -14,5 +16,7 @@ export const routes: Routes = [
     { path: 'order' , component: OrderComponent},
     { path: 'clients' , component: ClientComponent},
     { path: 'services' , component: ServiceComponent},
-    { path: 'edit-client/:nome' , component: EditClientComponent}
+    { path: 'edit-client/:nome' , component: EditClientComponent},
+    { path: 'edit-service/:nome' , component: EditServiceComponent},
+    { path: 'test/:nome' , component: TestComponent}
 ];

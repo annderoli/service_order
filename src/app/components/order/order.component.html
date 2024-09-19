@@ -8,17 +8,25 @@
 
     </div>
 
-    <div *ngIf="adicionar">
+    <div class="btn-container" >
 
-        <button class="btn mb-4" (click)="goToClients()"><img src="assets/mais-blue.png"> Adicionar Cliente</button>
-        <button class="btn" (click)="goToServices()"><img src="assets/mais-blue.png">Adicionar Serviços</button>
+        <!-- Botão para adicionar cliente -->
+        <button class="btn" (click)="addClient()" *ngIf="!clientAdded">Adicionar Cliente
+            <img src="assets/mais-blue.png">
+        </button>
+        <!-- Botão para confirmar adição de cliente -->
+        <button class="btn" *ngIf="clientAdded">Cliente Adicionado
+            <img src="assets/verificar.png">
+        </button>
 
-    </div>
-
-    <div *ngIf="adicionado">
-
-        <button class="btn mb-4" (click)="goToClients()"><img src="assets/verificar.png" >Cliente Adicionado com sucesso!</button>
-        <button class="btn" (click)="goToServices()"><img src="assets/mais-blue.png">Adicionar Serviços</button>
+        <!-- Botão para adicionar serviço -->
+        <button class="btn" (click)="addService()" *ngIf="!serviceAdded">Adicionar Serviço
+            <img src="assets/mais-blue.png">
+        </button>
+        <!-- Botão para confirmar adição de serviço -->
+        <button class="btn" *ngIf="serviceAdded">Serviço Adicionado
+            <img src="assets/verificar.png">
+        </button>
 
     </div>
 

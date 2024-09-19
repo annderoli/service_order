@@ -28,7 +28,20 @@ clients : Client[] = [];
 
 //Novo objeto
 client = new Client();
+
+createClient(): void {
+  this.clientService.createClient(this.client).subscribe(data => {
+    this.clients.push(data);
+
+    this.toastr.success('Cliente Cadastrado Com Sucesso!', 'Parabéns!')
+
+    this.router.navigate(['clients'])
+  });
+}
   
+
+
+  // Rotas
   goToHome() {
 
     this.router.navigate([''])

@@ -4,7 +4,7 @@
 
         <div class="title">
     
-            <img (click)="goToClient()" src="assets/left-white.png" style="cursor: pointer;">
+            <img (click)="goToHome()" src="assets/left-white.png" style="cursor: pointer;">
 
             <h1>Adicionar Novo Cliente</h1>
         
@@ -48,7 +48,8 @@
         <p>Observações</p>
         <input placeholder="Opcional" type="text" name="obs" [(ngModel)]="client.obs" >
     
-        <button class="btn-salvar" ><img src="assets/sum.png" alt="">Salvar</button>
+        <button class="btn-salvar" (click)="createClient()">
+        <img src="assets/sum.png">Salvar</button >
     
     </form>
 

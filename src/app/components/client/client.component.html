@@ -17,9 +17,13 @@
         
     </div>
 
-    <div class="card border-primary p-2" *ngFor="let c of clients" (click)="goToOrder()">
+    <div class="card border-primary p-2" (click)="addClient(i)"
+        *ngFor="let c of clients; index as i" >
+
         <p class="text-light">{{c.nome}}</p>
-        <img src="assets/editar.png" class="position-absolute end-0 bottom-0 m-3" (click)="goToEdit(c.nome)">
+        <img src="assets/editar.png" class="position-absolute end-0 bottom-0 m-3" 
+        (click)="selectClient(i)">
+
     </div>
 
 </div>

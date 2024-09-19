@@ -3,19 +3,18 @@
     flex-direction: column;
     width: 100%;
     gap: 10px;
-    padding: 0px 20px;
 }
 
 .title {
-    position: fixed;
+    position: absolute;
     display: flex;
     color: white;
     z-index: 1;
     justify-content: center;
     align-items: center;
-    top: 0;
-    right: 0;
     left: 0;
+    right: 0;
+    top: 0px;
 
 
     h1 {
@@ -37,6 +36,12 @@
     text-align: start;
     width: 100%;
     margin-top: 50px;
+    margin-bottom: 50px;
+
+    h1 {
+        margin: -10px 0 !important; 
+        padding: 0 !important; 
+    }
 
     input {
         cursor:auto;
@@ -46,7 +51,6 @@
         border-radius: 12px;
         padding: 15px 10px;
         width: 100%;
-        margin-top: 5px;
 
     }
 
@@ -57,32 +61,6 @@
         transform: translateY(-50%);
         cursor: pointer;
     }
-}
-
-.btn {
-    background-color: var(--prymary-color);
-    display: flex;
-    border: none;
-    color: white;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-
-    img {
-        width: 20px;
-        height: 20px;
-    }
-}
-
-table {
-    margin-top: 30px;
-}
-
-.table > thead > tr:nth-child(2n+1)>th{
-    color: white;
-    background-color: var(--prymary-color);
-
 }
 
 .cadastro {
@@ -103,4 +81,41 @@ table {
         margin-top: 20px;
         margin-bottom: 10px;
     }
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cards {
+    height: 150px;
+    box-shadow: 0px 0.5px 3px var(--prymary-color);
+    color: var(--prymary-color);
+
+    .tel {
+        color: var(--prymary-color);
+    }
+}
+
+.img-cards {
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+
+}
+
+
+
+.content {
+    position: absolute;
+    bottom: 0;
+}
+
+.card {
+    background-color: var(--prymary-color);
 }

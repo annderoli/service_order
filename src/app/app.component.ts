@@ -5,6 +5,7 @@ import { AddServiceComponent } from "./components/add-service/add-service.compon
 import { AddClientComponent } from './components/add-client/add-client.component';
 import { FormsModule } from '@angular/forms';
 import { EditClientComponent } from './components/edit-client/edit-client.component';
+import { TestComponent } from './components/test/test.component';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ import { EditClientComponent } from './components/edit-client/edit-client.compon
     AddServiceComponent,
     AddClientComponent,
     FormsModule,
-    EditClientComponent
+    EditClientComponent,
+    TestComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
