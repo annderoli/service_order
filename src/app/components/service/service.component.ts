@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FooterComponent } from '../footer/footer.component';
 import { HeaderComponent } from '../header/header.component';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -10,7 +9,7 @@ import { EditServiceComponent } from '../edit-service/edit-service.component';
 @Component({
   selector: 'app-service',
   standalone: true,
-  imports: [HeaderComponent,FooterComponent, CommonModule, EditServiceComponent],
+  imports: [HeaderComponent, CommonModule, EditServiceComponent],
   templateUrl: './service.component.html',
   styleUrl: './service.component.scss'
 })
