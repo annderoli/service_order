@@ -15,7 +15,7 @@
             <img src="assets/mais-blue.png">
         </button>
         <!-- Botão para confirmar adição de cliente -->
-        <button class="btn" *ngIf="clientAdded">Cliente Adicionado
+        <button class="btn" *ngIf="clientAdded" (click)="addClient()">Cliente Adicionado
             <img src="assets/verificar.png">
         </button>
 
@@ -24,7 +24,7 @@
             <img src="assets/mais-blue.png">
         </button>
         <!-- Botão para confirmar adição de serviço -->
-        <button class="btn" *ngIf="serviceAdded">Serviço Adicionado
+        <button class="btn" *ngIf="serviceAdded" (click)="addService()">Serviço Adicionado
             <img src="assets/verificar.png">
         </button>
 

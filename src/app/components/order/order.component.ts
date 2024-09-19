@@ -18,34 +18,40 @@ constructor( private router: Router, private route : ActivatedRoute) {}
 clientAdded: boolean = false;
 serviceAdded: boolean = false;
 
-//Direciona para seleciona Cliente e Serviço
-addClient() {
-  this.router.navigate(['clients']); 
-}
-
-addService() {
-  this.router.navigate(['services'])
-}
-
-// quando o cliente for selecionado
-onClientSelected() {
-  this.clientAdded = true; // Altera a visibilidade dos botões
-}
-
-// quando o serviço for selecionado
-onServiceSelected() {
-  this.serviceAdded = true; // Altera a visibilidade dos botões
-}
-
 ngOnInit() {
-
+  // Verifica se cliente ou serviço já foram adicionados
   this.route.queryParams.subscribe(params => {
-    if (params['clientAdded']) {
+    if (params['clientAdded'] === 'true') {
       this.clientAdded = true;
     }
+    if (params['serviceAdded'] === 'true') {
+      this.serviceAdded = true;
+    }
   });
-
 }
+
+// Navegar para a seleção de clientes, mantendo o estado de serviceAdded
+addClient() {
+  this.router.navigate(['clients'], { 
+    queryParams: { 
+      clientAdded: false, // Permitir redefinir o cliente
+      serviceAdded: this.serviceAdded // Mantém o estado do serviço
+    } 
+  });
+}
+
+// Navegar para a seleção de serviços, mantendo o estado de clientAdded
+addService() {
+  this.router.navigate(['services'], { 
+    queryParams: { 
+      clientAdded: this.clientAdded, // Mantém o estado do cliente
+      serviceAdded: false // Permitir redefinir o serviço
+    } 
+  });
+}
+
+
+
   //Rotas
   goToHome() {
 

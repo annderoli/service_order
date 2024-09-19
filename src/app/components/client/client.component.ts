@@ -3,7 +3,7 @@ import { HeaderComponent } from "../header/header.component";
 import { CommonModule } from "@angular/common";
 import { EditClientComponent } from "../edit-client/edit-client.component";
 import { Client } from "../../model/Client";
-import { Router, RouterLink } from "@angular/router";
+import { ActivatedRoute, Router, RouterLink } from "@angular/router";
 import { ClientService } from "../../services/client.service";
 import { ToastrService } from "ngx-toastr";
 import { TestComponent } from "../test/test.component";
@@ -26,20 +26,21 @@ export class ClientComponent implements OnInit{
   allClients : Client[] = [];
 
   constructor(
-    private router : Router,  
+    private router : Router,
+    private route : ActivatedRoute,  
     private clientService : ClientService,
     private toastr : ToastrService ) {}
 
-  // Função chamada quando o cliente for selecionado
-  addClient(client: any) {
-    // Aqui você pode fazer a lógica para capturar o cliente selecionado
-    // Após selecionar o cliente, volta para o OrderComponent
-    this.router.navigate(['order'], { queryParams: { clientAdded: true } });
-  }
-
-
-
-
+    addClient(client: any) {
+      this.router.navigate(['order'], { 
+        queryParams: { 
+          clientAdded: true, // Atualiza para true quando um cliente é selecionado
+          serviceAdded: this.route.snapshot.queryParams['serviceAdded'] // Mantém o serviço selecionado, se existir
+        } 
+      });
+    }
+    
+  
   // Método cliente especifico
   selectClient(position : number) : void {
     const client = this.clients[position];

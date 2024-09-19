@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FooterComponent } from '../footer/footer.component';
 import { HeaderComponent } from '../header/header.component';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ServiceService } from '../../services/service.service';
 import { Service } from '../../model/Service';
@@ -14,16 +14,27 @@ import { EditServiceComponent } from '../edit-service/edit-service.component';
   templateUrl: './service.component.html',
   styleUrl: './service.component.scss'
 })
-export class ServiceComponent {
+export class ServiceComponent implements OnInit {
 
-constructor(private router : Router, private serviceService : ServiceService ) {}
+constructor(private router : Router, private serviceService : ServiceService, private route : ActivatedRoute) {}
 
-// Função chamada quando o cliente for selecionado
-addService(service: any) {
-  // Aqui você pode fazer a lógica para capturar o cliente selecionado
-  // Após selecionar o cliente, volta para o OrderComponent
-  this.router.navigate(['order'], { queryParams: { serviceAdded: true } });
+clientAdded: boolean = false;
+
+//Inicializa
+ngOnInit() {
+  this.getServices();
+  
 }
+
+addService(service: any) {
+  this.router.navigate(['order'], { 
+    queryParams: { 
+      clientAdded: this.route.snapshot.queryParams['clientAdded'], // Mantém o cliente selecionado
+      serviceAdded: true // Atualiza para true quando um serviço é selecionado
+    } 
+  });
+}
+
 
 //Objeto Serviços
 service = new Service();
@@ -48,11 +59,7 @@ getServices() : void {
     });
 }
 
-//Inicializa
-ngOnInit() {
-  this.getServices();
-  
-}
+
 
  // Barra de pesquisa
  search(e: Event): void {
