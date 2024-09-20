@@ -35,19 +35,16 @@ form {
 }
 
 input {
+    position: relative;
     border: none;
     background-color: white;
     display: flex;
     padding:20px 20px;
     text-align: start;
     align-items: center;
-}
 
-.flatpickr-input {
-    background-color: white;  // Cor de fundo padrão do layout
-    border: none;      // Bordas coerentes com o layout
-    padding: 10px;                            // Padding para seguir o layout
-    font-size: 1rem;                          // Ajustar o tamanho da fonte
-    border-radius: 6px;                       // Ajuste de borda, caso necessário
-  }
+    img {
+        position: absolute;
+    }
+}
 

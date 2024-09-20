@@ -1,1 +1,17 @@
-<input type="text" id="datepicker" placeholder="Select date" value="data" name="data"/>
+<div class="form">
+  <label class="form-label">Data de Nascimento</label>
+  <input 
+    type="text" 
+    class="form-control"
+    maxlength="10" 
+    [(ngModel)]="dataNascimento" 
+    (input)="formatarData($event)" 
+    placeholder="dd/mm/yyyy">
+
+    <input class="calendar" type="date">
+
+    <img src="assets/calendario.png" >
+
+
+</div>
+

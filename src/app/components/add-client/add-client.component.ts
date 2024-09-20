@@ -6,12 +6,13 @@ import { Router } from "@angular/router";
 import { ClientService } from "../../services/client.service";
 import { Client } from "../../model/Client";
 import { ToastrService } from "ngx-toastr";
+import { DateComponent } from "../date/date.component";
 
 
 @Component({
   selector: 'app-add-client',
   standalone: true,
-  imports: [HeaderComponent, CommonModule, FormsModule],
+  imports: [HeaderComponent, CommonModule, FormsModule, DateComponent],
   templateUrl: './add-client.component.html',
   styleUrl: './add-client.component.scss'
 })
