@@ -10,76 +10,70 @@
         
         </div>
 
-        <form>
+        <form >
             <!-- Informações do Cliente-->
              <legend class="">Informações do Cliente</legend>
             <div class="">
               <label  class="form-label">Nome</label>
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" [(ngModel)]="client.nome" name="nome">
             </div>
             <div class="">
               <label class="form-label">Telefone</label>
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" [(ngModel)]="client.telefone" name="telefone">
             </div>
             <div class="">
-              <label  class="form-label">CPF</label>
-              <input type="text" class="form-control">
+              <label class="form-label">Cpf</label>
+              <input type="text" class="form-control" [(ngModel)]="client.telefone" name="telefone">
             </div>
             <div class="">
-              <label class="form-label">Email</label>
-              <input type="text" class="form-control">
+              <label class="form-label">Observações para o Cliente</label>
+              <input type="text" class="form-control" [(ngModel)]="client.telefone" name="telefone">
             </div>
-            <div class="">
-              <app-date></app-date>
 
-            </div>
-            <!-- Informações do Veiculo-->
-            <legend class="mt-5">Informações do Veiculo</legend>
+            <app-date></app-date>
+
+            <legend class="">Informações do Carro</legend>
             <div class="">
-                <label  class="form-label">Marca</label>
-                <input type="text" class="form-control">
-            </div>
-            <div class="">
-              <label class="form-label">Modelo</label>
-              <input type="text" class="form-control">
+              <label  class="form-label">Carro</label>
+              <input type="text" class="form-control" [(ngModel)]="client.carro" name="carro">
             </div>
             <div class="">
-              <label class="form-label">Ano</label>
-              <input type="text" class="form-control">
+              <label  class="form-label">Marca</label>
+              <input type="text" class="form-control" [(ngModel)]="client.marca" name="marca">
             </div>
             <div class="">
-                <label  class="form-label">Cor</label>
-                <input type="date" class="form-control" >
-            </div>
-            <!-- Endereço-->
-            <legend class="mt-5">Endereço</legend>
-            <div class="">
-                <label class="form-label">CEP</label>
-                <input type="text" class="form-control">
+              <label class="form-label">Cor</label>
+              <input type="text" class="form-control" [(ngModel)]="client.cor" name="cor">
             </div>
             <div class="">
-                <label  class="form-label">Rua</label>
-                <input type="text" class="form-control">
+              <label  class="form-label">Observações</label>
+              <input type="text" class="form-control" [(ngModel)]="client.obs_carro" name="obs_carro">
+            </div>
+
+            <legend class="">Endereço</legend>
+            <div class="">
+              <label  class="form-label">Cep</label>
+              <input type="text" class="form-control" [(ngModel)]="client.nome" name="nome">
             </div>
             <div class="">
-                <label class="form-label">Número</label>
-                <input type="text" class="form-control">
+              <label class="form-label">Rua</label>
+              <input type="text" class="form-control" [(ngModel)]="client.telefone" name="telefone">
             </div>
             <div class="">
-                <label class="form-label">Bairro</label>
-                <input type="text" class="form-control">
+              <label class="form-label">Número</label>
+              <input type="text" class="form-control" [(ngModel)]="client.telefone" name="telefone">
             </div>
             <div class="">
-                <label  class="form-label">Cidade</label>
-                <input type="text" class="form-control">
+              <label  class="form-label">Bairro</label>
+              <input type="text" class="form-control" [(ngModel)]="client.nome" name="nome">
             </div>
             <div class="">
-                <label class="form-label">Estado</label>
-                <input type="text" class="form-control">
+              <label class="form-label">Cidade</label>
+              <input type="text" class="form-control" [(ngModel)]="client.telefone" name="telefone">
             </div>
             <div class="">
-              <label class="form-label">Observações</label>
-              <input type="text" class="form-control">
+              <label class="form-label">Estado</label>
+              <input type="text" class="form-control" [(ngModel)]="client.telefone" name="telefone">
             </div>
 
             <button type="submit" 

@@ -45,7 +45,7 @@ export class ClientComponent implements OnInit{
   selectClient(position : number) : void {
     const client = this.clients[position];
 
-    this.router.navigate(['edit-client', client.nome])
+    this.router.navigate(['edit-client', client.id])
 
   }
 

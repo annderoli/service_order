@@ -16,7 +16,7 @@ export const routes: Routes = [
     { path: 'order' , component: OrderComponent},
     { path: 'clients' , component: ClientComponent},
     { path: 'services' , component: ServiceComponent},
-    { path: 'edit-client/:nome' , component: EditClientComponent},
-    { path: 'edit-service/:nome' , component: EditServiceComponent},
+    { path: 'edit-client/:id' , component: EditClientComponent},
+    { path: 'edit-service/:id' , component: EditServiceComponent},
     { path: 'test/:nome' , component: TestComponent}
 ];

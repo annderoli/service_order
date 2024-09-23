@@ -10,38 +10,26 @@
         
         </div>
 
-        <form>
+        <form (ngSubmit)="updateClient()" >
 
         <label>Nome</label>
-        <input placeholder="Qual o Nome do cliente?" type="text" name="nome" [(ngModel)]="client.nome">
-        <input placeholder="Telefone com DDD" type="text" name="telefone" [(ngModel)]="client.telefone">
-        <input placeholder="E-mail" type="text" name="email" [(ngModel)]="client.email">
-        <input placeholder="CPF" type="text" name="cpf" [(ngModel)]="client.cpf">
-        <input placeholder="Qual o Carro?" type="text" name="nome" [(ngModel)]="client.nome">
-    
-        <p>Aniversário</p> 
-        <input type="date" name="aniversario" [(ngModel)]="client.aniversario">
-    
-        <p>Endereço</p>
-        <input placeholder="CEP" type="text" name="cep" [(ngModel)]="client.cep">
-        <input placeholder="Rua" type="text" name="rua" [(ngModel)]="client.rua">
-    
-        <span class="double">
-            <input class="num" placeholder="Número" type="text" name="numero" [(ngModel)]="client.numero">
-            <input placeholder="Complemento" type="text" name="complemento" [(ngModel)]="client.complemento">
-        </span>
-        
-        <input placeholder="Bairro" type="text" name="bairro" [(ngModel)]="client.bairro">
+        <input type="text" name="nome" [(ngModel)]="client.nome">
+        <label>Telefone</label>
+        <input type="text" name="telefone" [(ngModel)]="client.telefone">
+        <label>Carro</label>
+        <input type="text" name="carro" [(ngModel)]="client.carro">
 
-        <div class="double">
-        <input placeholder="Cidade" type="text" name="cidade" [(ngModel)]="client.cidade">
-        <input class="uf" placeholder="Estado" type="text" name="estado" [(ngModel)]="client.estado">
+        <div class="btn-edit">
+            <button class="btn btn-primary" type="submit" >
+                <img src="assets/sum.png" alt="">Salvar
+            </button>
+            <button class="btn btn-danger" type="button" (click)="openConfirmDeleteModal()" >
+                <img src="assets/sum.png" alt="">Deletar
+            </button>
+
         </div>
-    
-        <p>Observações</p>
-        <input placeholder="Opcional" type="text" name="obs" [(ngModel)]="client.obs" >
-    
-        <button class="btn-salvar" ><img src="assets/sum.png" alt="">Salvar</button>
+
+        <app-modal [client]="client" ></app-modal>
     
     </form>
 
