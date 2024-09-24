@@ -1,22 +1,44 @@
 <app-header></app-header>
 
-<div class="title">
-    
-    <img (click)="goToHome()" src="assets/left-white.png" style="cursor: pointer;">
+<div class="container">
 
-    <h1> Adicionar Novo Serviço</h1>
+  <div class="title">
 
+      <img (click)="goToService()" src="assets/left-white.png" style="cursor: pointer;">
+
+      <h1>Adicionar Novo Serviço</h1>
+  
+  </div>
+
+  <form [formGroup]="form" (ngSubmit)="createService()" class="needs-validation" novalidate>
+    <div class="mb-3">
+      <label  class="form-label">Serviço</label>
+      <input name="servico" type="text" class="form-control" formControlName="servico" [ngClass]="{'is-invalid': form.get('servico')?.invalid && form.get('servico')?.touched}">
+      <div *ngIf="form.get('servico')?.invalid && form.get('servico')?.touched" class="invalid-feedback">
+        <small *ngIf="form.get('servico')?.errors?.['required']">Adicione um Serviço</small>
+        <small *ngIf="form.get('servico')?.errors?.['minlength']">Adicione um Serviço Valido!</small>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label  class="form-label">Preço</label>
+      <input name="preco"  type="text" class="form-control" formControlName="preco" [ngClass]="{'is-invalid': form.get('preco')?.invalid && form.get('preco')?.touched}">
+      <div *ngIf="form.get('preco')?.invalid && form.get('preco')?.touched" class="invalid-feedback">
+        <small *ngIf="form.get('preco')?.errors?.['required']">Adicione o Nome</small>
+        <small *ngIf="form.get('preco')?.errors?.['minlength']">Adicione um Nome Valido!</small>
+      </div>
+    </div>
+  
+    <div class="mb-3">
+      <label  class="form-label">Observação</label>
+      <input name="detalhe"  type="detalhe" class="form-control" formControlName="detalhe" [ngClass]="{'is-invalid': form.get('detalhe')?.invalid && form.get('detalhe')?.touched}">
+      <div *ngIf="form.get('detalhe')?.invalid && form.get('detalhe')?.touched" class="invalid-feedback">
+        <small *ngIf="form.get('detalhe')?.errors?.['required']">Adicione Observação</small>
+        <small *ngIf="form.get('detalhe')?.errors?.['minlength']">Formato Inválido</small>
+      </div>
+    </div>
+  
+    <button type="submit" class="btn btn-primary d-flex gap-4 justify-content-center w-50 m-auto" [disabled]="form.invalid">
+      <img src="assets/mais-white.png" alt=""> Salvar</button>
+  </form>
 </div>
-
-<form class="form">
-
-    <h1 class="title-form">Novo Serviço</h1>
-
-    <input placeholder="Qual o Serviço?" class="servico" type="text" name="servico" [(ngModel)]="service.servico" >
-    <input placeholder="Detalhes do serviço" class="detalhes" type="text" name="detalhe" [(ngModel)]="service.detalhe" >
-    <input placeholder="Preço" class="preco" type="value" name="preco" [(ngModel)]="service.preco" >
-
-</form>
-
-<button class="btn-salvar" (click)="createService()">
-<img src="assets/sum.png" alt="">Salvar</button>

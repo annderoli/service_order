@@ -18,9 +18,24 @@ export class ServiceService {
     return this.http.get< Service[] >( this.url );
   }
 
+  getService(id : any): Observable< Service > {
+
+    return this.http.get<Service>(`${this.url}/${id}`)
+
+  }
+
   // Método para Inserir novos Serviços
   createService(obj: Service): Observable< Service> {
 
     return this.http.post< Service >( this.url, obj );
   }
+
+   // Método para Editar Cliente
+ updateService(id: any , obj: Service): Observable<Service> {
+  return this.http.put<Service>(`${this.url}/${id}`, obj);
+}
+
+deleteClient(id: number) : Observable<void>{
+  return this.http.delete<void>(`${this.url}/${id}`);
+}
 }

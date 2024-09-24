@@ -40,7 +40,6 @@ export class ClientComponent implements OnInit{
       });
     }
     
-  
   // Método cliente especifico
   selectClient(position : number) : void {
     const client = this.clients[position];

@@ -3,6 +3,7 @@ import { ClientService } from '../../services/client.service';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Client } from '../../model/Client';
+import { Service } from '../../model/Service';
 
 @Component({
   selector: 'app-modal',
@@ -14,6 +15,7 @@ import { Client } from '../../model/Client';
 export class ModalComponent implements OnInit {
 
   @Input() client! : Client; // Recebe o cliente a ser excluído
+  @Input() service! : Service; // Recebe o cliente a ser excluído
 
   constructor(private clientService: ClientService, private router: Router, private toastr: ToastrService) {}
 
@@ -26,7 +28,7 @@ export class ModalComponent implements OnInit {
   deleteClient(): void {
     this.clientService.deleteClient(this.client.id).subscribe( () => {
       
-        this.router.navigate(['clients']);
+        this.router.navigate(['order']);
         this.toastr.success('Cliente excluído com sucesso!');
       
       

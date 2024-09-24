@@ -10,7 +10,7 @@ export class ClientService {
 
   constructor(private http : HttpClient) { }
 
-  private url = 'http://localhost:3000/clients'
+  private url = 'http://192.168.18.6:3000/clients'
 
   // Método para buscar todos os Clientes
   getClients(): Observable< Client[] > {

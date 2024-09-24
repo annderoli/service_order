@@ -54,8 +54,6 @@ createClient(): void {
     this.clientService.createClient(this.client).subscribe(data => {
       this.clients.push(data);
 
-      console.log(this.client);
-
       this.toastr.success('Cliente Cadastrado Com Sucesso!', 'Parabéns!');
 
       this.router.navigate(['clients']);
@@ -96,17 +94,8 @@ formatPhone(event: any): void {
   }
 }
 
-
-
-
   // Rotas
   goToHome() {
-
-    this.router.navigate([''])
-
-  }
-
-  save() {
 
     this.router.navigate([''])
 

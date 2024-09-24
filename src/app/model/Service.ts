@@ -1,8 +1,9 @@
 export class Service {
 
-    id : string = '';
+    id! : any;
     servico : string = '';
-    detalhe : string = '';
     preco : string = '';
+    detalhe : string = '';
+    
 
 }

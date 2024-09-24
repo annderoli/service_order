@@ -12,7 +12,7 @@
 
   <form [formGroup]="form" (ngSubmit)="createClient()" class="needs-validation" novalidate>
     <div class="mb-3">
-      <label for="name" class="form-label">Nome</label>
+      <label  class="form-label">Nome</label>
       <input name="nome" id="name" type="text" class="form-control" formControlName="name" [ngClass]="{'is-invalid': form.get('name')?.invalid && form.get('name')?.touched}">
       <div *ngIf="form.get('name')?.invalid && form.get('name')?.touched" class="invalid-feedback">
         <small *ngIf="form.get('name')?.errors?.['required']">Adicione o Nome</small>
@@ -21,7 +21,7 @@
     </div>
   
     <div class="mb-3">
-      <label for="telefone" class="form-label">telefone</label>
+      <label  class="form-label">telefone</label>
       <input name="telefone"  
       id="telefone" 
       type="telefone" 
@@ -37,7 +37,7 @@
     </div>
 
     <div class="mb-3">
-      <label for="carro" class="form-label">Carro</label>
+      <label  class="form-label">Carro</label>
       <input name="carro"  id="carro" type="text" class="form-control" formControlName="carro" [ngClass]="{'is-invalid': form.get('carro')?.invalid && form.get('carro')?.touched}">
       <div *ngIf="form.get('carro')?.invalid && form.get('carro')?.touched" class="invalid-feedback">
         <small *ngIf="form.get('carro')?.errors?.['required']">Adicione o Nome</small>
@@ -46,7 +46,7 @@
     </div>
   
     <div class="mb-3">
-      <label for="placa" class="form-label">Placa</label>
+      <label  class="form-label">Placa</label>
       <input name="placa"  id="placa" type="placa" class="form-control" formControlName="placa" [ngClass]="{'is-invalid': form.get('placa')?.invalid && form.get('placa')?.touched}">
       <div *ngIf="form.get('placa')?.invalid && form.get('placa')?.touched" class="invalid-feedback">
         <small *ngIf="form.get('placa')?.errors?.['required']">Adicione uma placa</small>
@@ -57,9 +57,4 @@
     <button type="submit" class="btn btn-primary d-flex gap-4 justify-content-center w-50 m-auto" [disabled]="form.invalid">
       <img src="assets/mais-white.png" alt=""> Salvar</button>
   </form>
-  
-  
-  
-  
-
 </div>

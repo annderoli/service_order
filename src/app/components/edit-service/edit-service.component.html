@@ -1,1 +1,36 @@
-<p>edit-service works!</p>
+<app-header></app-header>
+
+<div class="container" *ngIf="service">
+
+        <div class="title">
+    
+            <img (click)="goToService()" src="assets/left-white.png" style="cursor: pointer;">
+
+            <h1>Editar Cliente</h1>
+        
+        </div>
+
+        <form (ngSubmit)="updateService()" >
+
+        <label>Serviço</label>
+        <input type="text" name="servico" [(ngModel)]="service.servico">
+        <label>Preço</label>
+        <input type="text" name="preco" [(ngModel)]="service.preco">
+        <label>Observações</label>
+        <input type="text" name="detalhe" [(ngModel)]="service.detalhe">
+
+        <div class="btn-edit">
+            <button class="btn btn-primary" type="submit" >
+                <img src="assets/sum.png" alt="">Salvar
+            </button>
+            <button class="btn btn-danger" type="button" (click)="openConfirmDeleteModal()" >
+                <img src="assets/sum.png" alt="">Deletar
+            </button>
+
+        </div>
+
+        <app-modal [service]="service" ></app-modal>
+    
+    </form>
+
+</div>

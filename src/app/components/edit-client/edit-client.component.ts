@@ -1,8 +1,8 @@
-import { Component, EventEmitter, input, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ClientService } from '../../services/client.service';
 import { ClientComponent } from '../client/client.component';
 import { Client } from '../../model/Client';
@@ -15,7 +15,7 @@ import { ModalComponent } from '../modal/modal.component';
 @Component({
   selector: 'app-edit-client',
   standalone: true,
-  imports: [HeaderComponent, CommonModule, FormsModule, ClientComponent, MatFormFieldModule, MatInputModule, MatDatepickerModule, ModalComponent],
+  imports: [HeaderComponent, CommonModule, FormsModule, ClientComponent, ModalComponent],
   templateUrl: './edit-client.component.html',
   styleUrl: './edit-client.component.scss'
 })

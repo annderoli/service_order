@@ -1,0 +1,50 @@
+
+
+.title {
+    position: absolute;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    h1 {
+        color: white;
+    }
+
+    img {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        left: 10px;
+        top: 20px;
+    }
+}
+
+form {
+    margin-top: 50px;
+}
+
+input {
+    margin: 10px 0px;
+    width: 100%;
+    padding: 20px 20px;
+}
+
+.btn-edit {
+    display: flex;
+    gap: 20px;
+    text-align: center;
+    justify-content: end;
+    margin-top: 20px;
+    margin-bottom: 50px;
+
+    .btn {
+        width: 30%;
+    }
+}
+
