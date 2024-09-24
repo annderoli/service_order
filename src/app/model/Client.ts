@@ -8,6 +8,7 @@ export class Client {
     obs_cliente : string = '';
 
     carro: string ='';
+    placa: string ='';
     marca: string ='';
     cor: string ='';
     obs_carro: string ='';

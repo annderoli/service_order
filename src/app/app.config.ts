@@ -7,6 +7,7 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideToastr } from 'ngx-toastr';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import {provideNativeDateAdapter} from '@angular/material/core';
+import { provideNgxMask } from 'ngx-mask';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -16,7 +17,8 @@ export const appConfig: ApplicationConfig = {
     provideAnimations(),
     provideToastr(), 
     provideAnimationsAsync(),
-    provideNativeDateAdapter()
+    provideNativeDateAdapter(),
+    provideNgxMask()
     
   ]
 };

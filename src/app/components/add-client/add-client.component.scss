@@ -48,3 +48,8 @@ input {
     }
 }
 
+.needs-validation .ng-invalid.ng-touched {
+    border-color: #dc3545; /* Borda vermelha para inputs inválidos */
+  }
+  
+

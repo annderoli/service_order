@@ -1,3 +1,13 @@
+.img-home {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    right: 25px;
+    top: 15px;
+    cursor: pointer;
+    z-index: 2;
+}
+
 .container {
     display: flex;
     flex-direction: column;

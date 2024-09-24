@@ -84,4 +84,8 @@ export class ClientComponent implements OnInit{
     this.router.navigate(['order']);
   }
 
+  goToAddClient() {
+    this.router.navigate(['add-client']);
+  }
+
 }
