@@ -1,0 +1,51 @@
+<!-- src/app/login/login.component.html -->
+<div class="container mt-5">
+    <h2 class="text-center mb-5">Login</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label for="username" class="form-label">Email</label>
+            <input
+              type="email"
+              id="username"
+              class="form-control"
+              formControlName="username"
+              [ngClass]="{
+                'is-invalid': loginForm.get('username')?.invalid && loginForm.get('username')?.touched
+              }"
+            />
+            <div *ngIf="loginForm.get('username')?.hasError('required') && loginForm.get('username')?.touched" class="invalid-feedback">
+              O email é obrigatório.
+            </div>
+            <div *ngIf="loginForm.get('username')?.hasError('email') && loginForm.get('username')?.touched" class="invalid-feedback">
+              Insira um email válido.
+            </div>
+          </div>
+  
+      <div class="mb-3">
+        <label for="password" class="form-label">Senha</label>
+        <input
+          type="password"
+          id="password"
+          class="form-control"
+          formControlName="password"
+          [ngClass]="{'is-invalid': loginForm.get('password')?.invalid && loginForm.get('password')?.touched}"
+        />
+        <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="invalid-feedback">
+          Senha é obrigatória.
+        </div>
+      </div>
+
+      <div class="d-flex m-auto flex-column text-center mt-4">
+        <button type="submit" class="btn btn-primary m-3" [disabled]="loginForm.invalid">Entrar</button>
+
+        <p>ou</p>
+  
+        <button (click)="register()" type="submit" class="btn d-flex m-auto">Registrar</button>
+
+      </div>
+  
+
+
+    </form>
+  </div>
+  

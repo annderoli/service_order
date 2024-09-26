@@ -8,9 +8,16 @@ import { ServiceComponent } from './components/service/service.component';
 import { EditClientComponent } from './components/edit-client/edit-client.component';
 import { TestComponent } from './components/test/test.component';
 import { EditServiceComponent } from './components/edit-service/edit-service.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { RecoveryComponent } from './components/recovery/recovery.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 
 export const routes: Routes = [
-    { path: '' , component: HomeComponent } ,
+    { path: 'home' , component: HomeComponent } ,
+    { path: 'register' , component: RegisterComponent } ,
+    { path: '' , component: LoginComponent } ,
+    { path: 'recovery' , component: RecoveryComponent } ,
     { path: 'add-service' , component: AddServiceComponent},
     { path: 'add-client' , component: AddClientComponent},
     { path: 'order' , component: OrderComponent},
