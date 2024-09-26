@@ -1,25 +1,34 @@
-<div class="container text-center" >
+<!-- src/app/login/login.component.html -->
+<div class="container mt-5">
+    <h5 class="text-center mb-5">Recuperação de <br>Senha</h5>
+    <form [formGroup]="loginForm">
+        <div class="mb-3">
+            <label for="username" class="form-label">Email</label>
+            <input
+              type="email"
+              id="username"
+              class="form-control"
+              formControlName="username"
+              [ngClass]="{
+                'is-invalid': loginForm.get('username')?.invalid && loginForm.get('username')?.touched
+              }"
+            />
+            <div *ngIf="loginForm.get('username')?.hasError('required') && loginForm.get('username')?.touched" class="invalid-feedback">
+              O email é obrigatório.
+            </div>
+            <div *ngIf="loginForm.get('username')?.hasError('email') && loginForm.get('username')?.touched" class="invalid-feedback">
+              Insira um email válido.
+            </div>
+          </div>
 
-    <h1>Esqueceu a senha?</h1>
-    <p>Recuperar a Senha</p>
-    <hr >
+      <div class="d-flex m-auto flex-column text-center mt-4">
+        <button type="submit" class="btn btn-primary m-3" [disabled]="loginForm.invalid">Enviar</button>
 
-    <form class="form text-start w-75 m-auto">
-        <label class="form-label">Email</label>
-        <input class="form-control mb-3 p-3" type="email">
+      </div>
+  
 
-        <div class="btn-container text-center">
-            <button class="btn btn-primary w-50 mt-4" type="submit">Enviar</button>
 
-        </div>
-
-        
-
-        
     </form>
-
-    
-
-</div>
-
+  </div>
+  
 
