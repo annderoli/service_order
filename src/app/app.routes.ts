@@ -12,11 +12,12 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { RecoveryComponent } from './components/recovery/recovery.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
+import { PdfComponent } from './components/pdf/pdf.component';
 
 export const routes: Routes = [
     { path: 'home' , component: HomeComponent } ,
     { path: 'register' , component: RegisterComponent } ,
-    { path: '' , component: LoginComponent } ,
+    { path: '' , component: PdfComponent } ,
     { path: 'recovery' , component: RecoveryComponent } ,
     { path: 'add-service' , component: AddServiceComponent},
     { path: 'add-client' , component: AddClientComponent},

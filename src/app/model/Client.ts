@@ -3,6 +3,7 @@ export class Client {
     id! : any;
     nome : string = '';
     telefone? : number ;
+    email : string = '';
     cpf? : number;
     aniversario? : Date;
     obs_cliente : string = '';

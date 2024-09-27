@@ -1,0 +1,146 @@
+<div class="container p-3 " >
+
+    <h1 class="text-center fs-2">ORDEM DE SERVIÇO</h1>
+
+    <div class="d-flex gap-1 justify-content-between p-3 mx-5">
+        <img src="assets/user.png" style="width: 80px; height: 80px;" class="float-start">
+
+        <div>
+            <p class="fw-bold m-0 p-0">{{business.nome}}</p>
+            <p class="m-0 p-0">{{business.telefone}}</p>
+
+        </div>
+        <div class="border p-2">
+            <div class="d-flex gap-1 justify-content-center">
+                <p class="fw-bold m-0 p-0">O.S. N°: </p>
+                <p class="">{{business.os}}</p>
+            </div>
+            <div class="d-flex gap-1">
+                <p class="fw-bold m-0 p-0">Data de abertura: </p>
+                <p class="">{{business.data}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="border p-3 m-3">
+        <h1 class="fw-bold text-center">DADOS DO CLIENTE</h1>
+
+        <div class="d-flex">
+
+        <div class="w-50">
+
+            <span class="d-flex gap-1">
+                <p class="fw-bold">Nome:</p>
+                <p>{{client.nome}}</p></span>
+            <span class="d-flex gap-1">
+                <p class="fw-bold">Telefone:</p>
+                <p>{{client.telefone}}</p>
+            </span>
+            <span class="d-flex gap-1">
+                <p class="fw-bold">E-mail:</p>
+                <p>{{client.email}}</p>
+            </span>
+            <span class="d-flex gap-1">
+                <p class="fw-bold">CPF:</p>
+                <p>{{client.telefone}}</p>
+            </span>
+        </div>
+    
+        <div class=" d-flex flex-column justify-content-end">
+            <span class="d-flex gap-1">
+                <p class="fw-bold">Endereço:</p>
+                <p>{{client.rua}}</p>
+            </span>
+            <span class="d-flex gap-1">
+                <p class="fw-bold">Cidade:</p>
+                <p>{{client.cidade}}</p>
+            </span>
+            <span class="d-flex gap-1">
+                <p class="fw-bold">Bairro:</p>
+                <p>{{client.bairro}}</p>
+            </span>
+            <span class="d-flex gap-1">
+                <p class="fw-bold">CEP:</p>
+                <p>{{client.cep}}</p>
+            </span>
+        </div>
+
+    </div>
+
+    </div>
+    <div class="border p-3 m-3">
+        <h1 class="fw-bold text-center">INFORMÇÕES DOS PRODUTOS</h1>
+
+        <div class="d-flex gap-1">
+            <p class="fw-bold">Detalhe:</p>
+            <p>Lorem ipsum dolor sit amet</p>
+
+        </div>
+        <div class="d-flex gap-1">
+            <p class="fw-bold">Quantidade:</p>
+            <p>03</p>
+
+        </div>
+        <div class="d-flex gap-1">
+            <p class="fw-bold">Valor:</p>
+            <p>150,00</p>
+
+        </div>
+
+    </div>
+    <div class="border p-3 m-3">
+        <h1 class="fw-bold text-center">RELATO DO CLIENTE</h1>
+
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto quas vel sit ducimus odio nihil aperiam</p>
+
+    </div>
+    <div class="border p-3 m-3">
+        <h1 class="fw-bold text-center">SERVIÇO A SER PRESTADO</h1>
+
+        <p>{{service.servico}}</p>
+
+    </div>
+    <div class="border p-3 m-3">
+        <h1 class="fw-bold text-center">OBSERVAÇÕES</h1>
+
+        <p>Lorem ipsum dolor sit amet consectetur</p>
+
+    </div>
+    <div class="border p-3 m-3">
+        <h1 class="fw-bold text-center">ORÇAMENTO</h1>
+
+        <div class="d-flex">
+            <p class="w-50">Valor dos serviços</p>
+            <p>{{service.preco}}</p>
+
+        </div>
+        <div class="d-flex">
+            <p class="w-50">Valor de peças/produtos</p>
+            <p>{{service.preco}}</p>
+
+        </div>
+        <div class="d-flex">
+            <p class="fw-bold w-50">Valor Total</p>
+            <p class="fw-bold">{{service.preco}}</p>
+
+        </div>
+
+    </div>
+    <div class="d-flex align-items-center mt-5 mx-5">
+
+        <div class="w-100">
+            <hr class="w-75 m-0 p-0">
+            <p class="">Assinatura Cliente</p>
+
+        </div>
+        <div class="w-100">
+            <hr class="w-75 m-0 p-0">
+            <p class="">Assinatura Técnico</p>
+
+        </div>
+
+    </div>
+
+
+
+</div>

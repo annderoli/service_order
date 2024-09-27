@@ -24,4 +24,9 @@ export class AuthService {
       map(users => users.length > 0) // Verifica se o usuário existe
     );
   }
+
+  sendEmail(to: string, subject: string, text: string): Observable<any> {
+    const emailData = { to, subject, text };
+    return this.http.post<any>(this.apiUrl, emailData);
+  }
 }

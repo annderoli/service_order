@@ -35,7 +35,7 @@ export class RegisterComponent {
       this.authService.register(username, password).subscribe({
         next: () => {
           this.toast.success('Usuario Cadastrado com Sucesso!');
-          this.router.navigate(['login']); // Redireciona para a página de login após cadastro
+          this.router.navigate(['']); // Redireciona para a página de login após cadastro
         },
         error: error => {
           this.toast.error('Usuario Não Cadastrado');

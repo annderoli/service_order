@@ -25,4 +25,22 @@ export class RecoveryComponent {
     });
   }
 
+  onSubmit() {
+    if (this.loginForm.valid) {
+      const email = this.loginForm.get('username')?.value;
+      this.authService.sendEmail(email, 'Recuperação de Senha', 'Clique no link para recuperar sua senha.')
+        .subscribe(
+          response => {
+            console.log('Email enviado com sucesso!', response);
+            alert('Email enviado com sucesso!');
+            this.router.navigate(['/login']); // Redireciona para a página de login
+          },
+          error => {
+            console.error('Erro ao enviar o email', error);
+            alert('Erro ao enviar o email');
+          }
+        );
+    }
+  }
+
 }
