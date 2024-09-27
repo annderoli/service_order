@@ -6,18 +6,15 @@ import { OrderComponent } from './components/order/order.component';
 import { ClientComponent } from './components/client/client.component';
 import { ServiceComponent } from './components/service/service.component';
 import { EditClientComponent } from './components/edit-client/edit-client.component';
-import { TestComponent } from './components/test/test.component';
 import { EditServiceComponent } from './components/edit-service/edit-service.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { RecoveryComponent } from './components/recovery/recovery.component';
-import { WelcomeComponent } from './components/welcome/welcome.component';
-import { PdfComponent } from './components/pdf/pdf.component';
 
 export const routes: Routes = [
     { path: 'home' , component: HomeComponent } ,
     { path: 'register' , component: RegisterComponent } ,
-    { path: '' , component: PdfComponent } ,
+    { path: '' , component: LoginComponent } ,
     { path: 'recovery' , component: RecoveryComponent } ,
     { path: 'add-service' , component: AddServiceComponent},
     { path: 'add-client' , component: AddClientComponent},
@@ -25,6 +22,5 @@ export const routes: Routes = [
     { path: 'clients' , component: ClientComponent},
     { path: 'services' , component: ServiceComponent},
     { path: 'edit-client/:id' , component: EditClientComponent},
-    { path: 'edit-service/:id' , component: EditServiceComponent},
-    { path: 'test/:nome' , component: TestComponent}
+    { path: 'edit-service/:id' , component: EditServiceComponent}
 ];

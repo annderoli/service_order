@@ -31,14 +31,18 @@ constructor(
 
 clientAdded: boolean = false;
 
-addService(service: any) {
+addService(position: any) {
+  const service = this.services[position];
+
   this.router.navigate(['order'], { 
     queryParams: { 
-      clientAdded: this.route.snapshot.queryParams['clientAdded'], // Mantém o cliente selecionado
-      serviceAdded: true // Atualiza para true quando um serviço é selecionado
-    } 
+      serviceId: service.id, // Passa o ID do serviço selecionado
+      clientId: this.route.snapshot.queryParams['clientId'] // Mantém o ID do cliente, se existir
+    }, 
+    queryParamsHandling: 'merge' // Garante que os parâmetros existentes sejam preservados
   });
 }
+
 
 // Método serviço especifico
 selectService(position : number) : void {

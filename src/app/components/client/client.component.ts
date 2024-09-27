@@ -6,13 +6,12 @@ import { Client } from "../../model/Client";
 import { ActivatedRoute, Router, RouterLink } from "@angular/router";
 import { ClientService } from "../../services/client.service";
 import { ToastrService } from "ngx-toastr";
-import { TestComponent } from "../test/test.component";
 
 
 @Component({
   selector: 'app-client',
   standalone: true,
-  imports: [HeaderComponent, CommonModule, EditClientComponent, RouterLink, TestComponent],
+  imports: [HeaderComponent, CommonModule, EditClientComponent, RouterLink],
   templateUrl: './client.component.html',
   styleUrl: './client.component.scss'
 })
@@ -31,14 +30,18 @@ export class ClientComponent implements OnInit{
     private clientService : ClientService,
     private toastr : ToastrService ) {}
 
-    addClient(client: any) {
+    addClient(position: any) { 
+      const client = this.clients[position];
+    
       this.router.navigate(['order'], { 
         queryParams: { 
-          clientAdded: true, // Atualiza para true quando um cliente é selecionado
-          serviceAdded: this.route.snapshot.queryParams['serviceAdded'] // Mantém o serviço selecionado, se existir
-        } 
+          clientId: client.id, // Passa o ID do cliente selecionado
+          serviceId: this.route.snapshot.queryParams['serviceId'] // Mantém o ID do serviço, se existir
+        }, 
+        queryParamsHandling: 'merge' // Garante que os parâmetros existentes sejam preservados
       });
     }
+    
     
   // Método cliente especifico
   selectClient(position : number) : void {
@@ -58,6 +61,8 @@ export class ClientComponent implements OnInit{
 
   ngOnInit() {
     this.getClients();
+
+    
     
   }
 

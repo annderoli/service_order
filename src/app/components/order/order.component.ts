@@ -2,54 +2,62 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
 import { CommonModule } from '@angular/common';
+import { ServiceService } from '../../services/service.service';
+import { Service } from '../../model/Service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-order',
   standalone: true,
-  imports: [HeaderComponent, CommonModule],
+  imports: [HeaderComponent, CommonModule, FormsModule],
   templateUrl: './order.component.html',
   styleUrl: './order.component.scss'
 })
 export class OrderComponent implements OnInit {
 
-constructor( private router: Router, private route : ActivatedRoute) {}
+  service!: Service;
 
-clientAdded: boolean = false;
-serviceAdded: boolean = false;
+  constructor( 
+    private router: Router, 
+    private route : ActivatedRoute,
+    private serviceService : ServiceService) {}
 
-ngOnInit() {
-  // Verifica se cliente ou serviço já foram adicionados
-  this.route.queryParams.subscribe(params => {
-    if (params['clientAdded'] === 'true') {
-      this.clientAdded = true;
-    }
-    if (params['serviceAdded'] === 'true') {
-      this.serviceAdded = true;
-    }
-  });
-}
+  clientId!: string; // ID do cliente
+  serviceId!: string; // ID do serviço
 
-// Navegar para a seleção de clientes, mantendo o estado de serviceAdded
-addClient() {
-  this.router.navigate(['clients'], { 
-    queryParams: { 
-      clientAdded: false, // Permitir redefinir o cliente
-      serviceAdded: this.serviceAdded // Mantém o estado do serviço
-    } 
-  });
-}
+  ngOnInit() {
 
-// Navegar para a seleção de serviços, mantendo o estado de clientAdded
-addService() {
-  this.router.navigate(['services'], { 
-    queryParams: { 
-      clientAdded: this.clientAdded, // Mantém o estado do cliente
-      serviceAdded: false // Permitir redefinir o serviço
-    } 
-  });
-}
+    // Verifica se cliente ou serviço já foram adicionados via seus IDs
+    this.route.queryParams.subscribe(params => {
 
+      if (params['clientId']) {
+        this.clientId = params['clientId']; // Captura o ID do cliente da URL
+      }
+      if (params['serviceId']) {
+        this.serviceId = params['serviceId']; // Captura o ID do serviço da URL
+      }
+    });
+  }
 
+  // Navegar para a seleção de clientes, mantendo o estado do serviceId
+  addClient() {
+    this.router.navigate(['clients'], { 
+      queryParams: { 
+        clientId: null, // Permitir redefinir o cliente (pode ser null ou undefined)
+        serviceId: this.serviceId // Mantém o ID do serviço selecionado
+      } 
+    });
+  }
+
+  // Navegar para a seleção de serviços, mantendo o estado do clientId
+  addService() {
+    this.router.navigate(['services'], { 
+      queryParams: { 
+        clientId: this.clientId, // Mantém o ID do cliente selecionado
+        serviceId: null // Permitir redefinir o serviço (pode ser null ou undefined)
+      } 
+    });
+  }
 
   //Rotas
   goToHome() {
@@ -59,8 +67,8 @@ addService() {
   }
 
   save() {
+    console.log(this.service)
 
-    this.router.navigate(['save'])
 
   }
 
